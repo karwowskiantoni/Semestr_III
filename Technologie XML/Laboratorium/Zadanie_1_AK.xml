@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<PojazdyPancerneDrugiejWojnyŚwiatowej>
+    
+    
+
+
+    
+    <Pojazd typPojazdu="L" kraj="PL">
+        
+        <NazwaModelu> 4TP </NazwaModelu>
+        
+        <Waga> 4.8T </Waga>
+        <PrędkośćMaksymalna> 35km/h</PrędkośćMaksymalna>
+        
+        <Wyposażenie> 
+            <Zawieszenie udźwig="6.8T">
+                <Wieża masa="300kg">
+                    <Typ>4TP</Typ>
+                    <Działo kaliber="20mm"> wz.38 FK-A </Działo>
+                </Wieża>
+                <Radio zasięg="300m"> N2 </Radio>
+            </Zawieszenie>
+        </Wyposażenie>
+
+        <Załoga>
+            <Członek funkcja1="D" funkcja2="S" funkcja3="O"/>
+            <Członek funkcja1="K"/>
+        </Załoga>
+
+
+    </Pojazd>
+
+
+
+
+
+
+    <Kraje>
+        <Kraj id="ZSRR"> Związek Socjalistycznych Republik Radzieckich </Kraj>
+        <Kraj id="IIIR"> Trzecia Rzesza </Kraj>
+        <Kraj id="PL"> Polska </Kraj>
+        <Kraj id="FR"> Francja </Kraj>
+        <Kraj id="USA"> Stany Zjednoczone Ameryki </Kraj>
+    </Kraje>
+
+    <TypyPojazdow>
+        <Typ id="L"> Czołg Lekki </Typ>
+        <Typ id="M"> Czołg Średni </Typ>
+        <Typ id="H"> Czołg Ciężki </Typ>
+    </TypyPojazdow>
+
+    <FunkcjeZalogi>
+
+        <Funkcja Id="D"> Dowódca </Funkcja>
+        <Funkcja Id="S"> Strzelec </Funkcja>
+        <Funkcja Id="O"> Operator </Funkcja>
+        <Funkcja Id="N"> Nawigator </Funkcja>
+        <Funkcja Id="K"> Kierowca </Funkcja>
+
+    </FunkcjeZalogi>
+
+    <Autor>
+        <Imię> Antoni </Imię>
+        <Nazwisko> Karwowski </Nazwisko>
+        <Indeks> 229908 </Indeks>
+    </Autor>
+
+</PojazdyPancerneDrugiejWojnyŚwiatowej>
