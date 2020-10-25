@@ -1,0 +1,55 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT filmweb (Początek, MagazynFilmów, Platformy, Autor, DataOstatniejModyfikacji)>
+<!ATTLIST Film 
+    numer CDATA #REQUIRED
+    gatunek CDATA #REQUIRED
+    krajProdukcji CDATA #REQUIRED
+    oskary CDATA #REQUIRED>
+<!ELEMENT Film (Info+, Plakat*, Dostępność*)>
+
+<!ELEMENT Info (Tytuł+, Reżyser, Ocena, Boxoffice, Sukces, Premiera)>
+
+<!ATTLIST Tytuł 
+    origin CDATA #REQUIRED>
+<!ELEMENT Tytuł (#PCDATA)>
+
+<!ELEMENT Reżyser (Imię+, Nazwisko)>
+<!ELEMENT Imię (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+
+<!ELEMENT Ocena (Średnia, Głosów)>
+<!ELEMENT Średnia (#PCDATA)>
+<!ELEMENT Głosów (#PCDATA)>
+
+<!ELEMENT Boxoffice (Całość, PierwszyTydzień, UdziałPierwszegoTygodnia, Budżet)>
+<!ELEMENT Całość (#PCDATA)>
+<!ELEMENT PierwszyTydzień (#PCDATA)>
+<!ELEMENT UdziałPierwszegoTygodnia (#PCDATA)>
+<!ELEMENT Budżet (#PCDATA)>
+
+<!ELEMENT Sukces EMPTY>
+<!ATTLIST Sukces
+    value CDATA #REQUIRED>
+
+<!ELEMENT Premiera (#PCDATA)>
+
+<!ELEMENT Plakat EMPTY>
+<!ATTLIST Plakat 
+    plik ID #REQUIRED
+    ścieżka CDATA #REQUIRED>  
+<!ELEMENT Dostępność EMPTY>
+
+<!ATTLIST Dostępność 
+    platforma IDREFS #REQUIRED>
+<!ELEMENT Początek (#PCDATA)>
+<!ELEMENT MagazynFilmów (Film*)>
+
+<!ELEMENT Platformy (Platforma*)>
+<!ELEMENT Platforma (#PCDATA)>
+<!ATTLIST Platforma 
+    link ID #REQUIRED>
+
+<!ELEMENT Autor (Imię+, Nazwisko, NrAlbumu)>
+<!ELEMENT NrAlbumu (#PCDATA)>
+<!ELEMENT DataOstatniejModyfikacji (#PCDATA)>
