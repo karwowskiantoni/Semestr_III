@@ -1,0 +1,13 @@
+PojazdyPancerneDrugiejWojnyŚwiatowej{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: url( https://a.allegroimg.com/s400/111c9c/0b0961c94cc0993341b07a11e023/100x100cm-naklejka-Roman-obrazek-dziecka-dekoracja);
+
+    background-size: 50%;
+}
+
+Waga{
+    width: 1000px;
+    height: 1000px;
+    background-size: contain;
+}
