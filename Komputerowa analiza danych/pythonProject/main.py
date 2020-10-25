@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import math
 import plotly.graph_objects as go
 
@@ -16,14 +15,12 @@ def findingMinimum(operator):
             currentMinimum = i
     return currentMinimum
 
-
 def findingMaximum(operator):
     currentMaximum = operator[0]
     for i in operator:
         if i > currentMaximum:
             currentMaximum = i
     return currentMaximum
-
 
 def arithmeticAverage(operator):
     divider = len(operator)
@@ -33,7 +30,6 @@ def arithmeticAverage(operator):
     average = sum / divider
     return round(average, 2)
 
-
 def standardDevation(operator):
     averageValue = arithmeticAverage(operator)
     divider = len(operator)
@@ -42,7 +38,6 @@ def standardDevation(operator):
         sum += math.pow((i - averageValue), 2)
     return round(math.sqrt(sum / divider), 2)
 
-
 def median(operator):
     if len(operator) % 2 == 1:
         return operator[len(operator) // 2]
@@ -50,15 +45,6 @@ def median(operator):
         midValue = operator[len(operator) // 2 - 1]
         nextToMidValue = operator[(len(operator) // 2)]
         return ((midValue + nextToMidValue) / 2)
-
-
-def charValues(operator):
-    charValuesList = [findingMinimum(operator), arithmeticAverage(operator),
-                      standardDevation(operator),
-                      median(np.sort(operator)), median(np.sort(operator)[:len(operator) // 2]),
-                      median(np.sort(operator)[(len(operator) // 2):]), findingMaximum(operator)]
-    print(charValuesList)
-    return charValuesList
 
 if __name__ == '__main__':
 
@@ -75,6 +61,7 @@ if __name__ == '__main__':
     veriscolorFirstTableValues = (str(versicolorNumbers) + " (" + str(versicolorPercentage)) + "%)"
     virginicaFirstTableValues = (str(virginicaNumbers) + " (" + str(virginicaPercentage)) + "%)"
     allFlowersFirstTableValues = (str(allFlowersNumbers)) + " (100%)"
+
     valuesFirstTable = [["setosa", "versicolor", "virginica", "<b>Razem</b>"],
                         [setosaFirstTableValues, veriscolorFirstTableValues, virginicaFirstTableValues,
                          allFlowersFirstTableValues]]
@@ -100,16 +87,55 @@ if __name__ == '__main__':
             height=30)
     )
     ])
-    #figOne.show()
+    figOne.show()
 
     sepalLengthList = dataFrame["Długość działki kielicha"].values.tolist()
     sepalWidthList = dataFrame["Szerokość działki kielicha"].values.tolist()
     petalLengthList = dataFrame["Długość płatka"].values.tolist()
     petalWidthList = dataFrame["Szerokość płatka"].values.tolist()
 
-    charValues(sepalLengthList)
-    charValues(sepalWidthList)
-    charValues(petalLengthList)
-    charValues(petalWidthList)
+    allMinimums = findingMinimum(sepalLengthList), findingMinimum(sepalWidthList), findingMinimum(petalLengthList), \
+                  findingMinimum(petalWidthList)
 
+    allAverages = str(arithmeticAverage(sepalLengthList)) + " (± " + str(standardDevation(sepalLengthList)) + ")", \
+                  str(arithmeticAverage(sepalWidthList)) + " (± " + str(standardDevation(sepalWidthList)) + ")", \
+                  str(arithmeticAverage(petalLengthList)) + " (± " + str(standardDevation(petalLengthList)) + ")", \
+                  str(arithmeticAverage(petalWidthList)) + " (± " + str(standardDevation(petalWidthList)) + ")"
 
+    allMedians = str(median(sorted(sepalLengthList))) + " (" + str(median(sorted(sepalLengthList)[:len(sepalLengthList) // 2]))\
+                 + " - " + str(median(sorted(sepalLengthList)[(len(sepalLengthList) // 2):])) + ")", str(median(sorted(sepalWidthList))) + \
+                 " (" + str(median(sorted(sepalWidthList)[:len(sepalWidthList) // 2]))\
+                 + " - " + str(median(sorted(sepalWidthList)[(len(sepalWidthList) // 2):])) + ")", \
+                 str(median(sorted(petalLengthList))) + " (" + str(median(sorted(petalLengthList)[:len(petalLengthList) // 2]))\
+                 + " - " + str(median(sorted(petalLengthList)[(len(petalLengthList) // 2):])) + ")", \
+                 str(median(sorted(petalWidthList))) + " (" + str(median(sorted(petalWidthList)[:len(petalWidthList) // 2]))\
+                 + " - " + str(median(sorted(petalWidthList)[(len(petalWidthList) // 2):])) + ")"
+
+    allMaxiumums = findingMaximum(sepalLengthList), findingMaximum(sepalWidthList), findingMaximum(petalLengthList), \
+                   findingMaximum(petalWidthList)
+
+    #Table no.2
+    figTwo = go.Figure(data=[go.Table(
+        columnorder=[1, 2],
+        columnwidth=[80, 400],
+        header=dict(
+            values=[['<b>Cecha</b>'],
+                    ['<b>Minimum</b>'], ['<b>Śr.arytm.(± odch. stand.)</b>'],
+                    ['<b>Mediana (Q1 - Q3)</b>'], ['Maksimum']],
+            line_color='darkslategray',
+            fill_color='royalblue',
+            align=['left', 'center'],
+            font=dict(color='white', size=12),
+            height=40
+        ),
+        cells=dict(
+            values=[["Długość działki kielicha (cm)", "Szerokość działki kielicha (cm)", "Długość płatka (cm)",
+                        "Szerokość płatka (cm)"], allMinimums, allAverages, allMedians, allMaxiumums],
+            line_color='darkslategray',
+            fill=dict(color=['paleturquoise', 'white']),
+            align=['left', 'center'],
+            font_size=12,
+            height=30)
+    )
+    ])
+    figTwo.show();
