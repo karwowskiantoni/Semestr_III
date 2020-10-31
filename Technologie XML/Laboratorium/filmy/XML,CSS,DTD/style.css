@@ -1,0 +1,591 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@700&family=Orbitron:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+filmweb {
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+Początek {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  font-size: 50px;
+  border: 25px gold groove;
+  position: relative;
+}
+
+Początek:hover {
+  top: 2px;
+}
+
+Film > Info {
+  display: inline-block;
+  padding: 10px;
+  border: 25px crimson solid;
+  width: 30%;
+}
+
+Info > * {
+  display: block;
+  padding: 15px;
+}
+
+Tytuł {
+  font-family: "Lemonada", cursive;
+  font-size: 25px;
+  color: bisque;
+  text-shadow: 1px 2px 3px crimson;
+  position: relative;
+}
+
+Tytuł:hover {
+  top: 10px;
+}
+
+[origin="pl"]::before {
+  content: "Tytuł polski: ";
+  display: block;
+}
+
+[origin="org"]::before {
+  content: "Tytuł oryginalny: ";
+  display: block;
+}
+
+Reżyser {
+  font-family: "Cuprum", sans-serif;
+  font-size: 20px;
+  color: burlywood;
+}
+
+Reżyser::before {
+  content: "Reżyseria: ";
+}
+
+Ocena {
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  color: darkgoldenrod;
+}
+
+Film Średnia::before {
+  content: "Średnia ocen: ";
+}
+
+Głosów::after {
+  content: " głosów ";
+}
+
+Średnia::after {
+  content: " z ";
+}
+
+Boxoffice > * {
+  display: list-item;
+  list-style-type: square;
+  font-size: 20px;
+}
+
+Całość::before {
+  content: "Całkowity przychód: ";
+}
+
+Całość::after {
+  content: " $";
+}
+
+PierwszyTydzień::before {
+  content: "Przychód pierwszego tygodnia: ";
+}
+
+PierwszyTydzień::after {
+  content: " $";
+}
+
+UdziałPierwszegoTygodnia::before {
+  content: "Udział pierwszego tygodnia w przychodzie: ";
+}
+
+UdziałPierwszegoTygodnia::after {
+  content: " %";
+}
+
+Budżet {
+  padding: 40px;
+  margin: 50px;
+}
+
+Budżet::before {
+  content: "Budżet: ";
+}
+
+Budżet::after {
+  content: " $";
+}
+
+Premiera::before {
+  display: block;
+  content: "Premiera światowa";
+}
+
+Premiera::after {
+  display: block;
+  content: "Obejrzyj w serwisie: ";
+}
+
+Premiera {
+  font-size: 20px;
+}
+
+[gatunek] > Info > Ocena::after {
+  display: block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: cornsilk;
+  font-size: 25px;
+}
+
+[gatunek="Dramat"] > Info > Ocena::after {
+  content: "Gatunek: Dramat";
+  display: block;
+}
+
+[gatunek="Biograficzny"] > Info > Ocena::after {
+  content: "Gatunek: Biograficzny";
+  display: block;
+}
+
+[gatunek="Komedia"] > Info > Ocena::after {
+  content: "Gatunek: Komedia";
+  display: block;
+}
+
+[gatunek="Gangsterski"] > Info > Ocena::after {
+  content: "Gatunek: Gangsterski";
+  display: block;
+}
+
+[gatunek="Psychologiczny"] > Info > Ocena::after {
+  content: "Gatunek: Psychologiczny";
+  display: block;
+}
+
+[gatunek="Fantasy"] > Info > Ocena::after {
+  content: "Gatunek: Fantasy";
+  display: block;
+}
+
+[gatunek="Kryminał"] > Info > Ocena::after {
+  content: "Gatunek: Kryminał";
+  display: block;
+}
+
+[gatunek="Familijny"] > Info > Ocena::after {
+  content: "Gatunek: Familijny";
+  display: block;
+}
+
+[gatunek="Thriller"] > Info > Ocena::after {
+  content: "Gatunek: Thriller";
+  display: block;
+}
+
+[gatunek="Western"] > Info > Ocena::after {
+  content: "Gatunek: Western";
+  display: block;
+}
+
+[gatunek="Sci-Fi"] > Info > Ocena::after {
+  content: "Gatunek: Sci-Fi";
+  display: block;
+}
+
+[krajProdukcji] > Info > Tytuł[origin="org"]::after {
+  background-size: 70px;
+  display: block;
+  content: "";
+  margin-left: 90%;
+}
+
+[krajProdukcji="USA"] > Info > Tytuł[origin="org"]::after {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/US_36_Star_Flag.svg/800px-US_36_Star_Flag.svg.png);
+  width: 70px;
+  height: 35px;
+}
+
+[krajProdukcji="Francja"] > Info > Tytuł[origin="org"]::after {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png);
+  width: 70px;
+  height: 35px;
+}
+
+[krajProdukcji="Wielka Brytania"] > Info > Tytuł[origin="org"]::after {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png);
+  width: 70px;
+  height: 35px;
+}
+
+[krajProdukcji="Włochy"] > Info > Tytuł[origin="org"]::after {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png);
+  width: 70px;
+  height: 35px;
+}
+
+[oskary] > Info > Reżyser::after {
+  background-image: url(https://www.svgrepo.com/show/262098/oscar.svg);
+  background-size: 30px;
+  display: block;
+  content: "";
+  margin-left: 50%;
+}
+
+[oskary="1"] > Info > Reżyser::after {
+  width: 30px;
+  height: 30px;
+}
+
+[oskary="2"] > Info > Reżyser::after {
+  width: 60px;
+  height: 30px;
+}
+
+[oskary="3"] > Info > Reżyser::after {
+  width: 90px;
+  height: 30px;
+}
+
+[oskary="4"] > Info > Reżyser::after {
+  width: 120px;
+  height: 30px;
+}
+
+[oskary="5"] > Info > Reżyser::after {
+  width: 150px;
+  height: 30px;
+}
+
+[oskary="6"] > Info > Reżyser::after {
+  width: 180px;
+  height: 30px;
+}
+
+[oskary="7"] > Info > Reżyser::after {
+  width: 210px;
+  height: 30px;
+}
+
+[oskary="10"] > Info > Reżyser::after {
+  width: 300px;
+  height: 30px;
+}
+
+Plakat {
+  display: inline-block;
+  height: 700px;
+  width: 500px;
+  position: relative;
+  margin-left: 350px;
+  margin-bottom: 50px;
+}
+
+Plakat:hover {
+  bottom: 15px;
+}
+
+[value="true"]::after {
+  padding: 100px;
+  content: "";
+  background: url("https://i.imgur.com/GHSF6Ei.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  top: 0px;
+  transition: top ease 1s;
+}
+
+[value="false"]::after {
+  padding: 100px;
+  content: "";
+  background: url("https://i.imgur.com/9ueVXVM.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  top: 0px;
+  transition: top ease 1s;
+}
+
+[plik="innocent.png"] {
+  background: url("https://i.imgur.com/tEjX1so.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="boogiewonderland.png"] {
+  background: url("https://i.imgur.com/EOE692o.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="coffeynotcoffe.png"] {
+  background: url("https://i.imgur.com/4J3Mszd.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="cantrefuseoffer.png"] {
+  background: url("https://i.imgur.com/V16R8z0.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="guilty.png"] {
+  background: url("Zdjęcia/guilty.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="runforrest.png"] {
+  background: url("https://i.imgur.com/66zSGl6.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="cuckoo.png"] {
+  background: url("https://i.imgur.com/Az3Hydm.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="fredoyoubrokemyheart.png"] {
+  background: url("https://i.imgur.com/zYp0V9o.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="redjacket.png"] {
+  background: url("https://i.imgur.com/NSzEokg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="rohanwillanswer.png"] {
+  background: url("https://i.imgur.com/w051CRT.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="goldenwatch.png"] {
+  background: url("https://i.imgur.com/c2iRGDf.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="youwouldntgetit.png"] {
+  background: url("https://i.imgur.com/ILRmko9.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="lavitaebella.png"] {
+  background: url("https://i.imgur.com/7UNxtKL.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="whatsinthebox.png"] {
+  background: url("https://i.imgur.com/5KU6Erw.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="takingthehobbitstoisengard.png"] {
+  background: url("https://i.imgur.com/RCIeiVD.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="onerule.png"] {
+  background: url("https://i.imgur.com/wfb79gJ.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="whatsthematterwithyou.png"] {
+  background: url("https://i.imgur.com/Rd1TRRw.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="chopinnocturn.png"] {
+  background: url("https://i.imgur.com/ma0KgFd.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="stevenash.png"] {
+  background: url("https://i.imgur.com/xrdwAPa.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="edithpiaf.png"] {
+  background: url("https://i.imgur.com/7plEdZa.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="theDissilent.png"] {
+  background: url("https://i.imgur.com/uU708xz.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="circleoflife.png"] {
+  background: url("https://i.imgur.com/qenAQzo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="sheepsgonesilent.png"] {
+  background: url("https://i.imgur.com/shPR9JB.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="sayhellotomylittefriend.png"] {
+  background: url("https://i.imgur.com/TJW6Wqe.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="kowalski.png"] {
+  background: url("https://i.imgur.com/Vx3xcc7.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="likearatinthemaze.png"] {
+  background: url("https://i.imgur.com/zhdMVT0.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="mysticchordsofmemory.png"] {
+  background: url("https://i.imgur.com/ijYs8pF.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="tonythelip.png"] {
+  background: url("https://i.imgur.com/oPvtnU5.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="beethoven.png"] {
+  background: url("https://i.imgur.com/76RKgdP.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[plik="areyounotentertained.png"] {
+  background: url("https://i.imgur.com/cuQW3ou.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[platforma="net"] {
+  padding: 40px;
+  background-image: url("https://i.imgur.com/crSOC3J.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+[platforma="hbo"] {
+  padding: 40px;
+  background-image: url("https://i.imgur.com/I20ESYo.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+[platforma="play"] {
+  padding: 40px;
+  background-image: url("https://i.imgur.com/tTRfjyY.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+[platforma="cp"] {
+  padding: 22px;
+  background-image: url("https://i.imgur.com/dvg0R4K.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+[platforma="cda"] {
+  padding: 40px;
+  background-image: url("https://i.imgur.com/arBpjWq.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+Dostępność {
+  display: block;
+}
+Gatunki,
+Platformy {
+  display: none;
+}
+
+Autor > Imię,
+Autor > Nazwisko,
+Autor > NrAlbumu {
+  color: gold;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  display: block;
+  font-size: 30px;
+}
+
+DataOstatniejModyfikacji::before {
+  content: "Data ostatniej modyfikacji: ";
+}
+
+DataOstatniejModyfikacji {
+  display: block;
+  font-size: 20px;
+}

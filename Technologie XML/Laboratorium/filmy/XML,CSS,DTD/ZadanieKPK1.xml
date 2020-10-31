@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Top30FilmówFilmweb>
+
+	<Film numer="1" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Skazani na Shawshank</Tytuł>
+		<Tytuł origin="org">The Shawshank Redemption</Tytuł>
+		<Reżyser>
+			<Imię>Frank</Imię>
+			<Nazwisko>Darabont</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.76</Średnia>
+			<Głosów>884670</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>59841469</Całość>
+			<PierwszyTydzień>727327</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>2.6%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>25000000</Budżet>
+		<Sukces value="false"/>
+		<Premiera>10 września 1994</Premiera>
+		<Plakat plik="innocent.jpg" ścieżka="C:\Zdjęcia" />
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="2" gatunek="g3" krajProdukcji="Francja" oskary="0">
+		<Tytuł origin="pl">Nietykalni</Tytuł>
+		<Tytuł origin="org">Intouchables</Tytuł>
+		<Reżyser>
+			<Imię>Olivier</Imię>
+			<Nazwisko>Nakache</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.63</Średnia>
+			<Głosów>647237</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>426588510</Całość>
+			<PierwszyTydzień>101053</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.8%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>9500000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>23 września 2011</Premiera>
+		<Plakat plik="boogiewonderland.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cp">Canal Plus</Dostępność>
+	</Film>
+	
+	<Film numer="3" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Zielona Mila</Tytuł>
+		<Tytuł origin="org">The Green Mile</Tytuł>
+		<Reżyser>
+			<Imię>Frank</Imię>
+			<Nazwisko>Darabont</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.60</Średnia>
+			<Głosów>969502</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>286801374</Całość>
+			<PierwszyTydzień>18017152</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>13.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>60000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>6 grudnia 1999</Premiera>
+		<Plakat plik="coffeynotcoffe.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="4" gatunek="g4" krajProdukcji="USA" oskary="3">
+		<Tytuł origin="pl">Ojciec Chrzestny</Tytuł>
+		<Tytuł origin="org">The Godfather</Tytuł>
+		<Reżyser>
+			<Imię>Francis</Imię>
+			<DrugieImię>Ford</DrugieImię>
+			<Nazwisko>Coppola</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.59</Średnia>
+			<Głosów>521237</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>245066411</Całość>
+			<PierwszyTydzień>302393</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>6000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>15 marca 1972</Premiera>
+		<Plakat plik="cantrefuseoffer.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="5" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Dwunastu gniewnych ludzi</Tytuł>
+		<Tytuł origin="org">12 Angry Men</Tytuł>
+		<Reżyser>
+			<Imię>Sidney</Imię>
+			<Nazwisko>Lumet</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.55</Średnia>
+			<Głosów>210034</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>2000000</Całość>
+			<PierwszyTydzień>20000</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>1.0%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>340000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>10 kwietnia 1957</Premiera>
+		<Plakat plik="guilty.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="6" gatunek="g1" krajProdukcji="USA" oskary="6">
+		<Tytuł origin="pl">Forrest Gump</Tytuł>
+		<Tytuł origin="org">Forrest Gump</Tytuł>
+		<Reżyser>
+			<Imię>Robert</Imię>
+			<Nazwisko>Zemeckis</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.52</Średnia>
+			<Głosów>958936</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>2683095371</Całość>
+			<PierwszyTydzień>24450602</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>7.4%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>55000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>24 czerwca 1994</Premiera>
+		<Plakat plik="runforrest.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="7" gatunek="g1" krajProdukcji="USA" oskary="5">
+		<Tytuł origin="pl">Lot nad kukułczym gniazdem</Tytuł>
+		<Tytuł origin="org">One Flew Over the Cuckoo's Nest</Tytuł>
+		<Reżyser>
+			<Imię>Milos</Imię>
+			<Nazwisko>Forman</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.44</Średnia>
+			<Głosów>384609</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>108981275</Całość>
+			<PierwszyTydzień>99761</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.1%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>3000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>19 listopada 1975</Premiera>
+		<Plakat plik="cuckoo.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="8" gatunek="g4" krajProdukcji="USA" oskary="6">
+		<Tytuł origin="pl">Ojciec Chrzestny II</Tytuł>
+		<Tytuł origin="org">The Godfather: Part II</Tytuł>
+		<Reżyser>
+			<Imię>Francis</Imię>
+			<DrugieImię>Ford</DrugieImię>
+			<Nazwisko>Coppola</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.38</Średnia>
+			<Głosów>267910</Głosów>
+		</Ocena>
+		<Boxoffice>193000000</Boxoffice>
+		<Boxoffice>
+			<Całość>286801374</Całość>
+			<PierwszyTydzień>406533</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.3%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>13000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>12 grudnia 1974</Premiera>
+		<Plakat plik="fredoyoubrokemyheart.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="9" gatunek="8" krajProdukcji="USA" oskary="7">
+		<Tytuł origin="pl">Lista Schindlera</Tytuł>
+		<Tytuł origin="org">Schindler's List</Tytuł>
+		<Reżyser>
+			<Imię>Steven</Imię>
+			<Nazwisko>Spielberg</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.33</Średnia>
+			<Głosów>353984</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>322139355</Całość>
+			<PierwszyTydzień>656636</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.7%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>22000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>30 listopada 1993</Premiera>
+		<Plakat plik="redjacket.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="10" gatunek="g6" krajProdukcji="USA" oskary="10">
+		<Tytuł origin="pl">Władca Pierścieni: Powrót Króla</Tytuł>
+		<Tytuł origin="org">The Lord of the Rings: The Return of the King</Tytuł>
+		<Reżyser>
+			<Imię>Peter</Imię>
+			<Nazwisko>Jackson</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.33</Średnia>
+			<Głosów>504231</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>1141999888</Całość>
+			<PierwszyTydzień>72629</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>9.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>94000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>1 grudnia 2003</Premiera>
+		<Plakat plik="rohanwillanswer.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="11" gatunek="g4" krajProdukcji="USA" oskary="1">
+		<Tytuł origin="pl">Pulp Fiction</Tytuł>
+		<Tytuł origin="org">Pulp Fiction</Tytuł>
+		<Reżyser>
+			<Imię>Quentin</Imię>
+			<Nazwisko>Tarantino</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.32</Średnia>
+			<Głosów>642086</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>213928762</Całość>
+			<PierwszyTydzień>9311882</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>8.6%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>8000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>10 września 1994</Premiera>
+		<Plakat plik="goldenwatch.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="12" gatunek="g1" krajProdukcji="USA" oskary="2">
+		<Tytuł origin="pl">Joker</Tytuł>
+		<Tytuł origin="org">Joker</Tytuł>
+		<Reżyser>
+			<Imię>Todd</Imię>
+			<Nazwisko>Phillips</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.30</Średnia>
+			<Głosów>240332</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>1074251311</Całość>
+			<PierwszyTydzień>96202337</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>9.3%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>55000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>31 sierpnia 2019</Premiera>
+		<Plakat plik="youwouldntgetit.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="13" gatunek="g1" krajProdukcji="Włochy" oskary="3">
+		<Tytuł origin="pl">Życie jest piękne</Tytuł>
+		<Tytuł origin="org">La vita è bella</Tytuł>
+		<Reżyser>
+			<Imię>Roberto</Imię>
+			<Nazwisko>Benigni</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.29</Średnia>
+			<Głosów>273850</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>229163264</Całość>
+			<PierwszyTydzień>118920</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>20000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>20 grudnia 1997</Premiera>
+		<Plakat plik="lavitaebella.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="14" gatunek="g7" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Siedem</Tytuł>
+		<Tytuł origin="org">Se7en</Tytuł>
+		<Reżyser>
+			<Imię>David</Imię>
+			<Nazwisko>Fincher</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.27</Średnia>
+			<Głosów>584100</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>327333559</Całość>
+			<PierwszyTydzień>13949807</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>6.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>33000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>15 września 1995</Premiera>
+		<Plakat plik="whatsinthebox.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net"> Netflix </Dostępność>
+	</Film>
+	
+	<Film numer="15" gatunek="g6" krajProdukcji="USA" oskary="2">
+		<Tytuł origin="pl">Władca Pierścieni: Dwie wieże</Tytuł>
+		<Tytuł origin="org">The Lord of the Rings: The Two Towers</Tytuł>
+		<Reżyser>
+			<Imię>Peter</Imię>
+			<Nazwisko>Jackson</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.26</Średnia>
+			<Głosów>485416</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>951227065</Całość>
+			<PierwszyTydzień>62007528</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>8.9%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>94000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>10 września 1994</Premiera>
+		<Plakat plik="takingthehobbitstoisengard.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="16" gatunek="g5" krajProdukcji="USA"  oskary="0">
+		<Tytuł origin="pl">Podziemny krąg</Tytuł>
+		<Tytuł origin="org">Fight Club</Tytuł>
+		<Reżyser>
+			<Imię>David</Imię>
+			<Nazwisko>Fincher</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.25</Średnia>
+			<Głosów>590170</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>100853753</Całość>
+			<PierwszyTydzień>11035485</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>10.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>63000000</Budżet>
+		<Sukces value="false"/>
+		<Premiera>10 września 1999</Premiera>
+		<Plakat plik="onerule.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="17" gatunek="g4" krajProdukcji="USA" oskary="1">
+		<Tytuł origin="pl">Chłopcy z ferajny</Tytuł>
+		<Tytuł origin="org">Goodfellas</Tytuł>
+		<Reżyser>
+			<Imię>Martin</Imię>
+			<Nazwisko>Scorsese</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.24</Średnia>
+			<Głosów>291566</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>46836214</Całość>
+			<PierwszyTydzień>6368901</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>13.6%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>25000000</Budżet>
+		<Sukces value="false"/>
+		<Premiera>12 września 1990</Premiera>
+		<Plakat plik="whatsthematterwithyou.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="18" gatunek="g2" krajProdukcji="Wielka Brytania" oskary="3">
+		<Tytuł origin="pl">Pianista</Tytuł>
+		<Tytuł origin="org">The Pianist</Tytuł>
+		<Reżyser>
+			<Imię>Roman</Imię>
+			<Nazwisko>Polański</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.23</Średnia>
+			<Głosów>581398</Głosów>
+		</Ocena>
+		<Boxoffice>120072577</Boxoffice>
+		<Boxoffice>
+			<Całość>286801374</Całość>
+			<PierwszyTydzień>18017152</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>13.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>35000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>24 maja 2002</Premiera>
+		<Plakat plik="chopinnocturn.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="play">Player</Dostępność>
+	</Film>
+	
+	<Film numer="19" gatunek="g2" krajProdukcji="USA" oskary="4">
+		<Tytuł origin="pl">Piękny umysł</Tytuł>
+		<Tytuł origin="org">A Beautiful Mind</Tytuł>
+		<Reżyser>
+			<Imię>Ron</Imię>
+			<Nazwisko>Howard</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.23</Średnia>
+			<Głosów>484007</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>313542341</Całość>
+			<PierwszyTydzień>111261</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.01%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>58000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera> 13 grudnia 2001 </Premiera>
+		<Plakat plik="stevenash.jpg" ścieżka="C:\Zdjęcia" />
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="20" gatunek="g11" krajProdukcji="USA" oskary="4">
+		<Tytuł origin="pl">Incepcja</Tytuł>
+		<Tytuł origin="org">Inception</Tytuł>
+		<Reżyser>
+			<Imię>Christoper</Imię>
+			<Nazwisko>Nolan</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.22</Średnia>
+			<Głosów>588602</Głosów>
+		</Ocena>
+		<Boxoffice></Boxoffice>
+		<Boxoffice>
+			<Całość>836836967</Całość>
+			<PierwszyTydzień>62785337</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>8.8%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>160000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>8 lipca 2010</Premiera>
+		<Plakat plik="edithpiaf.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="21" gatunek="g10" krajProdukcji="USA" oskary="2">
+		<Tytuł origin="pl">Django</Tytuł>
+		<Tytuł origin="org">Django Unchained</Tytuł>
+		<Reżyser>
+			<Imię>Quentin</Imię>
+			<Nazwisko>Tarantino</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.21</Średnia>
+			<Głosów>468970</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>425368238</Całość>
+			<PierwszyTydzień>30122888</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>8.4%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>100000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>11 grudnia 2012</Premiera>
+		<Plakat plik="theDissilent.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="22" gatunek="g8" krajProdukcji="USA" oskary="2">
+		<Tytuł origin="pl">Król lew</Tytuł>
+		<Tytuł origin="org">The Lion King</Tytuł>
+		<Reżyser>
+			<Imię>Jonathan</Imię>
+			<Nazwisko>Roberts</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.21</Średnia>
+			<Głosów>551772</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>968511805</Całość>
+			<PierwszyTydzień>1586753</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>45000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>15 czerwca 1994</Premiera>
+		<Plakat plik="circleoflife.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="23" gatunek="g9" krajProdukcji="USA" oskary="5">
+		<Tytuł origin="pl">Milczenie owiec</Tytuł>
+		<Tytuł origin="org">The Silence of the Lambs</Tytuł>
+		<Reżyser>
+			<Imię>Jonathan</Imię>
+			<Nazwisko>Demme</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.21</Średnia>
+			<Głosów>659412</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>272742922</Całość>
+			<PierwszyTydzień>13766814</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.9%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>19000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>30 stycznia 1991</Premiera>
+		<Plakat plik="sheepsgonesilent.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="24" gatunek="g4" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Człowiek z blizną</Tytuł>
+		<Tytuł origin="org">Scarface</Tytuł>
+		<Reżyser>
+			<Imię>Brian</Imię>
+			<Nazwisko>De Palma</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.19</Średnia>
+			<Głosów>248331</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>65884703</Całość>
+			<PierwszyTydzień>44597536</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>9.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>25000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>1 grudnia 1983</Premiera>
+		<Plakat plik="sayhellotomylittefriend.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Film numer="25" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Gran Torino</Tytuł>
+		<Tytuł origin="org">Gran Torino</Tytuł>
+		<Reżyser>
+			<Imię>Clint</Imię>
+			<Nazwisko>Eastwood</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.17</Średnia>
+			<Głosów>414883</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>269958228</Całość>
+			<PierwszyTydzień>271720</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.1%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>33000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>9 grudnia 2008</Premiera>
+		<Plakat plik="kowalski.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="26" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Wyspa tajemnic</Tytuł>
+		<Tytuł origin="org">Shutter Island</Tytuł>
+		<Reżyser>
+			<Imię>Martin</Imię>
+			<Nazwisko>Scorsese</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.15</Średnia>
+			<Głosów>557792</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>294804195</Całość>
+			<PierwszyTydzień>41062440</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>19.5%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>80000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>10 września 1994</Premiera>
+		<Plakat plik="likearatinthemaze.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="27" gatunek="g1" krajProdukcji="USA" oskary="0">
+		<Tytuł origin="pl">Więzień nienawiści</Tytuł>
+		<Tytuł origin="org">American Story X</Tytuł>
+		<Reżyser>
+			<Imię>Tony</Imię>
+			<Nazwisko>Kaye</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.13</Średnia>
+			<Głosów>296398</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>23875127</Całość>
+			<PierwszyTydzień>156076</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>1.6%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>20000000</Budżet>
+		<Sukces value="false"/>
+		<Premiera>30 października 1998</Premiera>
+		<Plakat plik="mysticchordsofmemory.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="28" gatunek="g3" krajProdukcji="USA" oskary="3">
+		<Tytuł origin="pl">Green Book</Tytuł>
+		<Tytuł origin="org">Green Book</Tytuł>
+		<Reżyser>
+			<Imię>Peter</Imię>
+			<Nazwisko>Farelly</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.12</Średnia>
+			<Głosów>190328</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>321752656</Całość>
+			<PierwszyTydzień>320429</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>0.1%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>23000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>11 września 2018</Premiera>
+		<Plakat plik="tonythelip.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="hbo">HBO GO</Dostępność>
+	</Film>
+	
+	<Film numer="29" gatunek="g1" krajProdukcji="Francja" oskary="0">
+		<Tytuł origin="pl">Leon Zawodowiec</Tytuł>
+		<Tytuł origin="org">Lèon</Tytuł>
+		<Reżyser>
+			<Imię>Luc</Imię>
+			<Nazwisko>Besson</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.12</Średnia>
+			<Głosów>816342</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>19501238</Całość>
+			<PierwszyTydzień>5306558</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>26.2%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>16000000</Budżet>
+		<Sukces value="false"/>
+		<Premiera>14 września 1994</Premiera>
+		<Plakat plik="beethoven.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="cda">CDA</Dostępność>
+	</Film>
+	
+	<Film numer="30" gatunek="g1" krajProdukcji="USA" oskary="5">
+		<Tytuł origin="pl">Gladiator</Tytuł>
+		<Tytuł origin="org">Gladiator</Tytuł>
+		<Reżyser>
+			<Imię>Ridley</Imię>
+			<Nazwisko>Scott</Nazwisko>
+		</Reżyser>
+		<Ocena>
+			<Średnia>8.09</Średnia>
+			<Głosów>744605</Głosów>
+		</Ocena>
+		<Boxoffice>
+			<Całość>465361176</Całość>
+			<PierwszyTydzień>34819017</PierwszyTydzień>
+			<UdziałPierwszegoTygodnia>9.4%</UdziałPierwszegoTygodnia>
+		</Boxoffice>
+		<Budżet>103000000</Budżet>
+		<Sukces value="true"/>
+		<Premiera>1 maja 2000</Premiera>
+		<Plakat plik="areyounotentertained.jpg" ścieżka="C:\Zdjęcia"/>
+		<Dostępność platforma="net">Netflix</Dostępność>
+	</Film>
+	
+	<Gatunki>
+		<Gatunek id="g1">Dramat</Gatunek>
+		<Gatunek id="g2">Biograficzny</Gatunek>
+		<Gatunek id="g3">Komedia</Gatunek>
+		<Gatunek id="g4">Gangsterski</Gatunek>
+		<Gatunek id="g5">Psychologiczny</Gatunek>
+		<Gatunek id="g6">Fantasy</Gatunek>
+		<Gatunek id="g7">Kryminał</Gatunek>
+		<Gatunek id="g8">Familijny</Gatunek>
+		<Gatunek id="g9">Thriller</Gatunek>
+		<Gatunek id="g10">Western</Gatunek>
+		<Gatunek id="g11">Sci-Fi</Gatunek>
+	</Gatunki>
+	
+	<Platformy>
+		<Platforma link="net">www.netflix.com</Platforma>
+		<Platforma link="hbo">www.hbogo.com</Platforma>
+		<Platforma link="play">www.player.com</Platforma>
+		<Platforma link="cp">www.canalplus.com</Platforma>
+		<Platforma link="cda">www.cda.pl</Platforma>
+	</Platformy>
+	
+	<Autor>
+		<Imię>Michał</Imię>
+		<Nazwisko>Gebel</Nazwisko>
+		<NrAlbumu>229879</NrAlbumu>
+	</Autor>
+	
+	<DataOstatniejModyfikacji>16.10.2020</DataOstatniejModyfikacji>
+	
+</Top30FilmówFilmweb>
