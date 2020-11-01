@@ -1,13 +1,21 @@
-PojazdyPancerneDrugiejWojnyŚwiatowej{
+PojazdyPancerneDrugiejWojnyŚwiatowej, obrazy{
     display: grid;
-    grid-template-columns: 50% 50%;
-    background: url( https://a.allegroimg.com/s400/111c9c/0b0961c94cc0993341b07a11e023/100x100cm-naklejka-Roman-obrazek-dziecka-dekoracja);
-
-    background-size: 50%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: 100%;
+    margin-top: 12pt;
+    grid-row-end: auto;
 }
 
-Waga{
-    width: 1000px;
-    height: 1000px;
+
+Pojazd{
+    font-family:  "New York";
+    font-size: 20pt;
+    background: url();
+}
+
+[plik="innocent.png"] {
+    background: url("https://i.imgur.com/tEjX1so.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-size: contain;
-}
+  }
