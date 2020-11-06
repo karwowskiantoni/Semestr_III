@@ -1,17 +1,17 @@
 package sample.model;
 
 public class PermuteTable {
-    int[] table;
-    public int[] getTable(){
+    byte[] table;
+    public byte[] getTable(){
         return table;
     }
 
-    public PermuteTable(int[] table) {
+    public PermuteTable(byte[] table) {
         this.table = table;
     }
 
-    public void shiftTable(int number){
-        int[] memory = new int[number];
+    public void shiftTable(byte number){
+        byte[] memory = new byte[number];
         for(int i = 0; i < number; i++){
             memory[i] = table[i];
         }

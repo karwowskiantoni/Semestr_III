@@ -2,11 +2,6 @@ package sample.model;
 
 public class BitArray {
     boolean[] bits;
-    String pom;
-
-    public String getPom() {
-        return pom;
-    }
 
     public BitArray(boolean[] bits) {
         this.bits = bits;
@@ -40,28 +35,32 @@ public class BitArray {
         this.bits = bits;
     }
 
+    @Override
+    public String toString() {
+        int[] numbers = new int[bits.length/8];
+        for(int i = 0; i < bits.length; i++){
+            if(bits[i]){
+                numbers[i/8] += Math.pow(2, i);
+            }
+        }
+        String result = "siusiak: ";
+        for(int i: numbers){
+            result +=Character.forDigit(i, 10);
+        }
+        return result;
+    }
+
     public boolean[] getBits() {
         return bits;
     }
 
-    @Override
-    public String toString() {
-        String result = "";
-        for (boolean b : bits) {
-            if (!b) {
-                result += "0";
-            } else {
-                result += "1";
-            }
-        }
-        return result;
-    }
+
 
     public BitArray permute(PermuteTable table) {
         boolean[] permutedBits = new boolean[table.getTable().length];
 
         for (int i = 0; i < permutedBits.length; i++) {
-            permutedBits[i] = bits[table.getTable()[i]];
+            permutedBits[i] = bits[table.getTable()[i]-1];
         }
 
         return new BitArray(permutedBits);
