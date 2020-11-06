@@ -13,13 +13,12 @@ public class BitArray {
     }
 
     public BitArray(String s) {
-        String pom = "";
         String pom2 = "";
 
         boolean[] bits = new boolean[8 * s.length()];
 
         for (int i = 0; i < s.length(); i++) {
-
+            String pom = "";
             int value = s.charAt(i);
 
             while (value > 0) {
@@ -29,18 +28,16 @@ public class BitArray {
                     pom += "0";
                 value /= 2;
             }
+            pom2 += "0";
+            for(int j = 0; j < pom.length(); j++){
+                pom2 += pom.toCharArray()[pom.length()-1-j];
+            }
         }
 
-        for(int i = 0; i < pom.length(); i++){
-            pom2 += pom.toCharArray()[pom.length()-1-i];
-        }
-        pom2 = "0" + pom2;
-
-        for (int i = 0; i < s.length(); i++) {
-            bits[i] = s.toCharArray()[i] == '1';
+        for (int i = 0; i < pom2.length(); i++) {
+            bits[i] = pom2.toCharArray()[i] == '1';
         }
         this.bits = bits;
-        this.pom = pom2;
     }
 
     public boolean[] getBits() {
@@ -57,7 +54,7 @@ public class BitArray {
                 result += "1";
             }
         }
-        return pom;
+        return result;
     }
 
     public void permute(PermuteTable table) {
