@@ -10,6 +10,14 @@ public class Key extends BitArray {
         }
         bits = result;
     }
+    public Key(String s) {
+        super(s);
+        boolean[] result = new boolean[bits.length - 8];
+        for(int i = 0; i < result.length; i++){
+            result[i] = bits[i+8];
+        }
+        bits = result;
+    }
 
     public BitArray[] generateIterableKeys(PermuteTable[] tables){
 

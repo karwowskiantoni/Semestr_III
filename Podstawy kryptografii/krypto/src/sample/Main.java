@@ -8,8 +8,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.model.BitArray;
+import sample.model.Key;
+import sample.model.PermuteTable;
 
 public class Main extends Application {
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -42,9 +45,10 @@ public class Main extends Application {
         launch(args);
     }
 
-    private String krypto(String data, String key){
-        boolean[] bits = {true, true, false};
-        BitArray test = new BitArray(data);
-        return test.toString();
+    private String krypto(String dataString, String keyString){
+        BitArray data = new BitArray(dataString);
+        Key key = new Key(keyString);
+
+        return key.toString();
     }
 }
