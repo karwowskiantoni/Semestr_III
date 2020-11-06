@@ -49,6 +49,7 @@ def median(operator):
 if __name__ == '__main__':
 
     #Values for table no.1
+    print(dataFrame)
     speciesList = dataFrame["Gatunek"].values.tolist()
     setosaNumbers = speciesList.count(0)
     versicolorNumbers = speciesList.count(1)
