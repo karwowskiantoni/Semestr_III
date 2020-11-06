@@ -20,9 +20,6 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600, 400));
 
-
-
-
         Scene scene = primaryStage.getScene();
 
         TextField dataField = (TextField ) scene.lookup("#dataField");
@@ -45,10 +42,14 @@ public class Main extends Application {
         launch(args);
     }
 
-    private String krypto(String dataString, String keyString){
+    private String krypto(String dataString, String keyString) {
         BitArray data = new BitArray(dataString);
         Key key = new Key(keyString);
-
+        BitArray[] keys = key.generateIterableKeys();
+        String result = "";
+        for (BitArray array : keys) {
+            result = array.toString()+System.lineSeparator();
+        }
         return key.toString();
     }
 }

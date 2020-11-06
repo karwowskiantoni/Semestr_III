@@ -8,8 +8,8 @@ public class BitArray {
         return pom;
     }
 
-    public BitArray(boolean[] bytes) {
-        this.bits = bytes;
+    public BitArray(boolean[] bits) {
+        this.bits = bits;
     }
 
     public BitArray(String s) {
@@ -57,14 +57,14 @@ public class BitArray {
         return result;
     }
 
-    public void permute(PermuteTable table) {
+    public BitArray permute(PermuteTable table) {
         boolean[] permutedBits = new boolean[table.getTable().length];
 
-        for (int i : table.getTable()) {
-            permutedBits[i] = bits[i];
+        for (int i = 0; i < permutedBits.length; i++) {
+            permutedBits[i] = bits[table.getTable()[i]];
         }
 
-        bits = permutedBits;
+        return new BitArray(permutedBits);
     }
 
     public BitArray divide(int left, int right) {
@@ -83,9 +83,24 @@ public class BitArray {
         return new BitArray(rightArray);
     }
 
-    public void XOR(BitArray bytes2) {
+    public BitArray XOR(BitArray bitArray) {
+        boolean[] bits2 = new boolean[bits.length];
+
         for (int i = 0; i < bits.length; i++) {
-            bits[i] = bits[i] != bytes2.getBits()[i];
+            bits2[i] = bits[i] != bitArray.getBits()[i];
         }
+        return new BitArray(bits2);
+    }
+
+    public BitArray connect(BitArray array){
+        boolean[] bits2 = new boolean[bits.length + array.getBits().length];
+        for(int i = 0; i < bits.length; i++){
+            bits2[i] = bits[i];
+        }
+
+        for(int i = bits.length; i < bits2.length; i++){
+            bits2[i] = array.getBits()[i-bits.length];
+        }
+        return new BitArray(bits2);
     }
 }
