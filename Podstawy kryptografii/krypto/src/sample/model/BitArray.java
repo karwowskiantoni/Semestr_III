@@ -7,10 +7,23 @@ public class BitArray {
         this.bits = bits;
     }
 
-    public BitArray(String s) {
+    /*
+    public BitArray(String pom2) {
+        boolean[] bits = new boolean[pom2.length()];
+        for (int i = 0; i < pom2.length(); i++) {
+            bits[i] = pom2.toCharArray()[i] == '1';
+        }
+        this.bits = bits;
+    }
+    */
+
+
+
+        public BitArray(String s) {
+
         String pom2 = "";
 
-        boolean[] bits = new boolean[8 * s.length()];
+        boolean[] bits = new boolean[s.length()*8];
 
         for (int i = 0; i < s.length(); i++) {
             String pom = "";
@@ -35,6 +48,7 @@ public class BitArray {
         this.bits = bits;
     }
 
+
     @Override
     public String toString() {
         char[] characters = new char[bits.length/8];
@@ -49,6 +63,21 @@ public class BitArray {
         String result = "";
         for(char c: characters){
             result += c;
+        }
+        return result;
+    }
+
+    public String bitsToString() {
+        String result = "";
+        for(int i = 0; i < bits.length; i++){
+            if(i%8 == 0){
+                result += " ";
+            }
+            if(bits[i]){
+                result+="1";
+            }else{
+                result+="0";
+            }
         }
         return result;
     }
@@ -77,8 +106,8 @@ public class BitArray {
             leftArray[i] = bits[i];
         }
 
-        for (int i = left; i < right; i++) {
-            rightArray[i] = bits[i];
+        for (int i = 0; i < right; i++) {
+            rightArray[i] = bits[left+i];
         }
 
         bits = leftArray;

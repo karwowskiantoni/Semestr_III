@@ -63,18 +63,22 @@ public class Main extends Application {
         launch(args);
     }
 
+
+
     private String krypto(String dataString, String keyString) {
         BitArray data = new BitArray(dataString);
         Key key = new Key(keyString);
         Sbox volodymir = new Sbox();
 
         data = data.permute(initialPermute);
+
         BitArray[] keys = key.generateIterableKeys();
 
         BitArray dataR = data.divide(32, 32);
         BitArray dataL = data;
 
 
+        String result = "";
         for(int i = 0; i < 16; i++){
             BitArray pom = new BitArray(dataR.getBits());
 
@@ -85,11 +89,15 @@ public class Main extends Application {
 
             dataR = dataR.XOR(dataL);
             dataL= pom;
+
+            result += "wykonanie pętli numer: " + i + System.lineSeparator();
+            result += "dataL: " + dataL.bitsToString()+ System.lineSeparator();
+            result += "dataR: " + dataR.bitsToString()+ System.lineSeparator() + System.lineSeparator();
         }
 
-
         data = dataL.connect(dataR).permute(finalPermute);
-        String result = data.toString();
         return result;
+
+
     }
 }
