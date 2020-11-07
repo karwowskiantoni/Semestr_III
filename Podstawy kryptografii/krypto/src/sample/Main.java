@@ -89,7 +89,6 @@ public class Main extends Application {
 
 
         data = dataL.connect(dataR).permute(finalPermute);
-
         String result = data.toString();
         return result;
     }

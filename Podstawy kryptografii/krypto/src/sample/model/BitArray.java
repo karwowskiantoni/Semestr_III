@@ -37,15 +37,18 @@ public class BitArray {
 
     @Override
     public String toString() {
-        int[] numbers = new int[bits.length/8];
-        for(int i = 0; i < bits.length; i++){
-            if(bits[i]){
-                numbers[i/8] += Math.pow(2, i);
+        char[] characters = new char[bits.length/8];
+        for(int i = 0; i < characters.length; i++){
+            for(int j = 0; j < 8; j++){
+                if(bits[i*8+j]){
+                    characters[i] += Math.pow(2, 7-j);
+                }
             }
         }
-        String result = "siusiak: ";
-        for(int i: numbers){
-            result +=Character.forDigit(i, 10);
+
+        String result = "";
+        for(char c: characters){
+            result += c;
         }
         return result;
     }
