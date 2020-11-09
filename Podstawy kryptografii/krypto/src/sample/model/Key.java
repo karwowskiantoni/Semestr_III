@@ -18,27 +18,18 @@ public class Key extends BitArray {
     public Key(boolean[] bits) {
         super(bits);
     }
-    public Key(String s) {
-        super(s);
-    }
-
-
 
     public BitArray[] generateIterableKeys(){
-
         BitArray[] bitArrays = new BitArray[16];
         BitArray pom1;
         BitArray pom2;
 
         for(int i = 0; i < bitArrays.length; i++){
-
             initialPermuteLeft.shiftTable(shiftTable[i]);
             initialPermuteRight.shiftTable(shiftTable[i]);
 
             pom1 = this.permute(initialPermuteLeft);
             pom2 = this.permute(initialPermuteRight);
-
-
 
             bitArrays[i] = pom1.connect(pom2).permute(finalPermute);
         }

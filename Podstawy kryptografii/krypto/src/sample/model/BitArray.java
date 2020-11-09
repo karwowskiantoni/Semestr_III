@@ -1,33 +1,62 @@
 package sample.model;
+import java.util.Scanner;
 
 public class BitArray {
     boolean[] bits;
+
+    //string -> bitarr done
+    //bitarr -> string done
+    //bitstring -> bitarr done
+    //bitarr -> bitstring done
+    //byte   -> bitarr done
+    //bitarr -> byte   done
+    //hex    -> bitarr done
+    //bitarr -> hex
 
     public BitArray(boolean[] bits) {
         this.bits = bits;
     }
 
-    /*
-    public BitArray(String pom2) {
-        boolean[] bits = new boolean[pom2.length()];
-        for (int i = 0; i < pom2.length(); i++) {
-            bits[i] = pom2.toCharArray()[i] == '1';
-        }
-        this.bits = bits;
+    public BitArray() {
+        this.bits = new boolean[0];
     }
-    */
+
+    public boolean[] getBits() {
+        return bits;
+    }
 
 
+    static public BitArray bitStringToBitArray(String data){
+        boolean[] bits = new boolean[data.length()];
+        for (int i = 0; i < data.length(); i++) {
+            bits[i] = data.toCharArray()[i] == '1';
+        }
+        return new BitArray(bits);
+    }
+    public String bitArrayToBitString() {
+        String result = "";
+        for(int i = 0; i < bits.length; i++){
+            if(i%8 == 0){
+                result += " ";
+            }
+            if(bits[i]){
+                result+="1";
+            }else{
+                result+="0";
+            }
+        }
+        return result;
+    }
 
-        public BitArray(String s) {
+     static public BitArray stringToBitArray(String data) {
 
         String pom2 = "";
 
-        boolean[] bits = new boolean[s.length()*8];
+        boolean[] bits = new boolean[data.length()*8];
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < data.length(); i++) {
             String pom = "";
-            int value = s.charAt(i);
+            int value = data.charAt(i);
 
             while (value > 0) {
                 if (value % 2 == 1) {
@@ -45,12 +74,9 @@ public class BitArray {
         for (int i = 0; i < pom2.length(); i++) {
             bits[i] = pom2.toCharArray()[i] == '1';
         }
-        this.bits = bits;
+        return new BitArray(bits);
     }
-
-
-    @Override
-    public String toString() {
+    public String bitArrayToString() {
         char[] characters = new char[bits.length/8];
         for(int i = 0; i < characters.length; i++){
             for(int j = 0; j < 8; j++){
@@ -67,25 +93,56 @@ public class BitArray {
         return result;
     }
 
-    public String bitsToString() {
-        String result = "";
-        for(int i = 0; i < bits.length; i++){
-            if(i%8 == 0){
-                result += " ";
-            }
-            if(bits[i]){
-                result+="1";
+    static public BitArray byteToBitArray (int data){
+        boolean[] array = new boolean[4];
+        for (int i = 0; i < 4; i++){
+            if (data%2 == 0){
+                array[i] = false;
             }else{
-                result+="0";
+                array[i] = true;
+            }
+            data = data/2;
+        }
+        for (int i = 0; i < array.length/2; i++){
+            boolean pom = array[i];
+            array[i] = array[array.length -1 - i];
+            array[array.length -1 - i] = pom;
+        }
+        return new BitArray(array);
+    }
+    public byte bitArrayToByte (){
+        byte result = 0;
+        for (int i = 0; i < bits.length; i++){
+            if (bits[i]){
+                result += Math.pow(2,bits.length-1-i);
             }
         }
         return result;
     }
 
-    public boolean[] getBits() {
-        return bits;
+    public String bitArrayToHexString(){
+        BitArray[] arrays = new BitArray[bits.length/4];
+        String result = "";
+        for(int i = arrays.length-1; i >= 0; i--){
+            arrays[i] = this.divide( bits.length-4, 4);
+        }
+
+        for(BitArray array: arrays){
+            result += Integer.toHexString(array.bitArrayToByte());
+        }
+        return result;
     }
 
+    static public BitArray hexStringToBitArray(String data){
+        BitArray array = new BitArray();
+        String result = "";
+        for(int i = 0 ; i < data.length(); i++){
+            String pom = "" + data.toCharArray()[i];
+            result += byteToBitArray(Integer.parseInt(pom, 16)).bitArrayToBitString() + " ";
+            array = array.connect(byteToBitArray(Integer.parseInt(pom, 16)));
+        }
+        return array;
+    }
 
 
     public BitArray permute(PermuteTable table) {
@@ -134,4 +191,5 @@ public class BitArray {
         }
         return new BitArray(bits2);
     }
+
 }
