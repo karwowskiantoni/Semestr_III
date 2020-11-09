@@ -7,10 +7,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="827.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="827.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <TextField id="dataField" layoutX="405.0" layoutY="159.0" prefHeight="62.0" prefWidth="233.0" />
-      <TextArea cache="true" editable="false" layoutX="405.0" layoutY="66.0" prefHeight="62.0" prefWidth="233.0" text="DANE">
+      <TextField fx:id="dataField" layoutX="447.0" layoutY="97.0" prefHeight="62.0" prefWidth="233.0" />
+      <TextArea cache="true" editable="false" layoutX="447.0" layoutY="25.0" prefHeight="62.0" prefWidth="233.0" text="DANE">
          <font>
             <Font size="18.0" />
          </font>
@@ -20,19 +20,21 @@
             <Font size="18.0" />
          </font>
       </TextArea>
-      <Button id="button" layoutX="746.0" layoutY="56.0" mnemonicParsing="false" prefHeight="185.0" prefWidth="283.0" text="LICZ TO!">
+      <Button fx:id="desStartButton" layoutX="795.0" layoutY="56.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="185.0" prefWidth="283.0" text="LICZ TO!">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <TextField id="keyField1" layoutX="36.0" layoutY="97.0" prefHeight="62.0" prefWidth="233.0" />
-      <TextArea id="resultField" layoutX="53.0" layoutY="328.0" prefHeight="459.0" prefWidth="1062.0" />
-      <CheckBox id="checkbox" layoutX="423.0" layoutY="246.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="215.0" text="Rozszyfruj (domyślnie Zaszyfruj)" />
+      <TextField fx:id="keyField1" layoutX="36.0" layoutY="97.0" prefHeight="62.0" prefWidth="233.0" />
+      <TextArea fx:id="resultField" layoutX="53.0" layoutY="438.0" prefHeight="353.0" prefWidth="1062.0" />
+      <CheckBox fx:id="checkbox" layoutX="829.0" layoutY="277.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="215.0" text="Rozszyfruj (domyślnie Zaszyfruj)" />
       <TextArea editable="false" layoutX="36.0" layoutY="173.0" prefHeight="62.0" prefWidth="233.0" text="KLUCZ nr 2">
          <font>
             <Font size="18.0" />
          </font>
       </TextArea>
-      <TextField id="keyField2" layoutX="36.0" layoutY="246.0" prefHeight="62.0" prefWidth="233.0" />
+      <TextField fx:id="keyField2" layoutX="36.0" layoutY="246.0" prefHeight="62.0" prefWidth="233.0" />
+      <Button fx:id="directoryButton" onAction="#chooseFile" layoutX="447.0" layoutY="173.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="233.0" text="Wybierz plik" />
+      <TextField fx:id="pathField" layoutX="447.0" layoutY="246.0" prefHeight="62.0" prefWidth="233.0" />
    </children>
 </Pane>

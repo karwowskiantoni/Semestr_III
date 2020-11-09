@@ -1,17 +1,7 @@
 package sample.model;
-import java.util.Scanner;
 
 public class BitArray {
     boolean[] bits;
-
-    //string -> bitarr done
-    //bitarr -> string done
-    //bitstring -> bitarr done
-    //bitarr -> bitstring done
-    //byte   -> bitarr done
-    //bitarr -> byte   done
-    //hex    -> bitarr done
-    //bitarr -> hex
 
     public BitArray(boolean[] bits) {
         this.bits = bits;
@@ -25,7 +15,6 @@ public class BitArray {
         return bits;
     }
 
-
     static public BitArray bitStringToBitArray(String data){
         boolean[] bits = new boolean[data.length()];
         for (int i = 0; i < data.length(); i++) {
@@ -33,6 +22,7 @@ public class BitArray {
         }
         return new BitArray(bits);
     }
+
     public String bitArrayToBitString() {
         String result = "";
         for(int i = 0; i < bits.length; i++){
@@ -48,11 +38,11 @@ public class BitArray {
         return result;
     }
 
-     static public BitArray stringToBitArray(String data) {
+    static public BitArray stringToBitArray(String data) {
 
         String pom2 = "";
 
-        boolean[] bits = new boolean[data.length()*8];
+        boolean[] bits = new boolean[data.length() * 8];
 
         for (int i = 0; i < data.length(); i++) {
             String pom = "";
@@ -76,6 +66,7 @@ public class BitArray {
         }
         return new BitArray(bits);
     }
+
     public String bitArrayToString() {
         char[] characters = new char[bits.length/8];
         for(int i = 0; i < characters.length; i++){
@@ -110,6 +101,7 @@ public class BitArray {
         }
         return new BitArray(array);
     }
+
     public byte bitArrayToByte (){
         byte result = 0;
         for (int i = 0; i < bits.length; i++){
@@ -143,7 +135,6 @@ public class BitArray {
         }
         return array;
     }
-
 
     public BitArray permute(PermuteTable table) {
         boolean[] permutedBits = new boolean[table.getTable().length];

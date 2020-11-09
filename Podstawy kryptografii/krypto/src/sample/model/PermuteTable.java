@@ -16,7 +16,7 @@ public class PermuteTable {
             memory[i] = table[i];
         }
 
-        for(int i = 0; i < table.length-number; i++){
+        for(int i = 0; i < table.length-number; i++) {
             table[i] = table[i+number];
         }
 

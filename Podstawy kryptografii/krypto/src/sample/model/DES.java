@@ -39,6 +39,7 @@ public class DES {
             return singleDES(data, keyStringOne, isEncoded).bitArrayToString();
         }
     }
+
     public BitArray singleDES(BitArray data, String keyString, boolean mode) {
         Key key = new Key(BitArray.stringToBitArray(keyString).getBits());
         Sbox sbox = new Sbox();
