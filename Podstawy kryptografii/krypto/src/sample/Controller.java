@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -32,15 +31,14 @@ public class Controller {
     @FXML
     CheckBox checkbox = new CheckBox();
 
-    DES tdes = new DES();
     byte[] bytes;
 
     public void encrypt() {
-       desStartButton.setOnAction(ActionEvent -> {
-           resultField.setText(tdes.tripleDES(dataField.getText(), keyField1.getText(),
-                   keyField2.getText(), !checkbox.isSelected()));
-       });
-
+        DES tdes = new DES();
+        desStartButton.setOnAction(ActionEvent -> {
+            resultField.setText(tdes.tripleDES(dataField.getText(), keyField1.getText(),
+                    keyField2.getText(), !checkbox.isSelected()));
+        });
     }
 
     public void chooseFile() throws IOException {
@@ -55,7 +53,6 @@ public class Controller {
                 e.printStackTrace();
             }
         });
-
     }
 
 }
