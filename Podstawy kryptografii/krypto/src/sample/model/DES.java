@@ -21,22 +21,22 @@ public class DES {
                                                                 2, 8, 24, 14, 32, 27, 3, 9,
                                                                 19, 13, 30, 6, 22, 11, 4, 25});
 
-
-    public String tripleDES(String dataString, String keyStringOne, String keyStringTwo, boolean isEncoded){
+/*
+    public String tripleDES(String dataString, String keyStringOne, String keyStringTwo, boolean notEncoded){
         BitArray data;
 
-        if(isEncoded){
+        if(notEncoded){
             data = BitArray.stringToBitArray(dataString);
         }else{
             data = BitArray.hexStringToBitArray(dataString);
         }
 
-        data = singleDES(data, keyStringOne, isEncoded);
-        data = singleDES(data, keyStringTwo, !isEncoded);
-        if(isEncoded){
-            return singleDES(data, keyStringOne, isEncoded).bitArrayToHexString();
+        data = singleDES(data, keyStringOne, notEncoded);
+        data = singleDES(data, keyStringTwo, !notEncoded);
+        if(notEncoded){
+            return singleDES(data, keyStringOne, notEncoded).bitArrayToHexString();
         }else{
-            return singleDES(data, keyStringOne, isEncoded).bitArrayToString();
+            return singleDES(data, keyStringOne, notEncoded).bitArrayToString();
         }
     }
 
@@ -69,4 +69,6 @@ public class DES {
         }
         return dataR.connect(dataL).permute(finalPermute);
     }
+
+ */
 }

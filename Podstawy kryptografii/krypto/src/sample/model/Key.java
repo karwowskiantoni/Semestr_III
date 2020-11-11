@@ -1,6 +1,6 @@
 package sample.model;
 
-public class Key extends BitArray {
+public class Key {}/* extends BitArray {
 
     PermuteTable initialPermuteLeft = new PermuteTable(new byte[]{57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26,18
                                                                 ,10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36});
@@ -36,3 +36,4 @@ public class Key extends BitArray {
         return bitArrays;
     }
 }
+*/

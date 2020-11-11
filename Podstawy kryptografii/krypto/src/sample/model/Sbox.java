@@ -43,6 +43,7 @@ public class Sbox {
 
     byte[][] boxes = new byte[][]{box1, box2, box3, box4, box5, box6, box7, box8};
 
+    /*
     public BitArray transformArray(BitArray array) {
         BitArray array2 = array.divide(6, 42);
         BitArray array3 = array2.divide(6, 36);
@@ -66,5 +67,6 @@ public class Sbox {
         byte coordY = new BitArray(new boolean[]{array.getBits()[1], array.getBits()[2], array.getBits()[3], array.getBits()[4]}).bitArrayToByte();
         return BitArray.byteToBitArray(boxes[number][coordX * 16 + coordY]);
     }
+     */
 }
 
