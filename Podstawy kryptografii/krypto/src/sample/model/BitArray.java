@@ -14,6 +14,14 @@ public class BitArray {
         length = bytes.length*8-1;
     }
 
+    public byte getByte(int index){
+        byte result = bytes[index];
+        if(index == length-1){
+            result = (byte) (result/(2*length/8));
+        }
+        return result;
+    }
+
     public int getLength(){
         return length;
     }
@@ -77,6 +85,8 @@ public class BitArray {
         }
         return result;
     }
+
+
 
     static public BitArray stringToBitArray(String data) {
         return new BitArray(data.getBytes());
