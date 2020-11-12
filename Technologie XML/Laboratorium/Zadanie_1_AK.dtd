@@ -1,0 +1,96 @@
+<!ELEMENT Zadanie_1_AK 
+    (Tytuł, PojazdyPancerneDrugiejWojnyŚwiatowej)
+>
+
+<!ELEMENT PojazdyPancerneDrugiejWojnyŚwiatowej 
+    (Pojazd+, Kraje, TypyPojazdow, FunkcjeZalogi, Autor)
+>
+
+<!ELEMENT Pojazd 
+    (NazwaModelu, Waga, PrędkośćMaksymalna, DataPowstania, Wyposażenie, Załoga)
+>
+
+<!ELEMENT Wyposażenie (Zawieszenie)>
+<!ELEMENT Zawieszenie (Wieża, Radio)>
+<!ELEMENT Wieża (TypWieży, Działo)>
+
+<!ELEMENT Załoga (Członek+)>
+
+<!ELEMENT Kraje (Kraj+)>
+<!ELEMENT TypyPojazdow (Typ+)>
+<!ELEMENT FunkcjeZalogi (Funkcja+)>
+<!ELEMENT Autor (Imię, Nazwisko, Indeks)>
+
+<!ELEMENT Tytuł (#PCDATA)>
+<!ELEMENT NazwaModelu (#PCDATA)>
+<!ELEMENT Waga (#PCDATA)>
+<!ELEMENT PrędkośćMaksymalna (#PCDATA)>
+<!ELEMENT DataPowstania (#PCDATA)>
+<!ELEMENT TypWieży (#PCDATA)>
+<!ELEMENT Działo (#PCDATA)>
+<!ELEMENT Radio (#PCDATA)>
+<!ELEMENT Członek EMPTY>
+
+<!ELEMENT Kraj (#PCDATA)>
+<!ELEMENT Typ (#PCDATA)>
+<!ELEMENT Funkcja (#PCDATA)>
+
+<!ELEMENT Imię (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+<!ELEMENT Indeks (#PCDATA)>
+
+
+
+
+<!ATTLIST Pojazd 
+    numer NMTOKEN #REQUIRED
+    typPojazdu CDATA #REQUIRED
+    kraj IDREF #REQUIRED
+>
+
+<!ATTLIST Waga
+    jednostka CDATA #REQUIRED
+>
+
+<!ATTLIST PrędkośćMaksymalna
+    jednostka CDATA #FIXED "km/h"
+>
+
+<!ATTLIST Zawieszenie
+    udźwig CDATA #REQUIRED
+    jednostka CDATA #FIXED "%"
+>
+
+<!ATTLIST Wieża
+    masa CDATA #REQUIRED
+    jednostka CDATA #FIXED "kg"
+>
+
+<!ATTLIST Działo
+    kaliber CDATA #REQUIRED
+    jednostka CDATA #REQUIRED
+>
+
+<!ATTLIST Radio
+    zasięg CDATA #REQUIRED
+    jednostka CDATA #FIXED "m"
+>
+
+<!ATTLIST Członek
+    funkcja1 CDATA #REQUIRED
+    funkcja2 CDATA #IMPLIED
+    funkcja3 CDATA #IMPLIED
+    funkcja4 CDATA  #IMPLIED
+>
+
+<!ATTLIST Kraj
+    id ID #REQUIRED 
+>
+
+<!ATTLIST Typ
+    id ID #REQUIRED 
+>
+
+<!ATTLIST Funkcja
+    id ID #REQUIRED 
+>
