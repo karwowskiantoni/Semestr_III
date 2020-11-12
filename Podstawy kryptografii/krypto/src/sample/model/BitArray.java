@@ -11,15 +11,7 @@ public class BitArray {
 
     public BitArray(byte[] bytes){
         this.bytes = bytes;
-        length = bytes.length*8-1;
-    }
-
-    public byte getByte(int index){
-        byte result = bytes[index];
-        if(index == length-1){
-            result = (byte) (result/(2*length/8));
-        }
-        return result;
+        length = bytes.length*8;
     }
 
     public int getLength(){
@@ -34,11 +26,11 @@ public class BitArray {
         int position = index + 1;
         byte insertion = (byte) value;
         byte chosenByte = bytes[(index) / 8];
-        byte shiftedInsertion = (byte) (insertion << (position%8));
+        byte shiftedInsertion = (byte) (insertion << (8 - (position - (index / 8) * 8)));
         if (insertion == 1) {
             chosenByte = (byte) (shiftedInsertion | chosenByte);
         } else {
-            chosenByte = (byte) (chosenByte & ~(1 << (position%8)));
+            chosenByte = (byte) (chosenByte & ~(1 << (8 - (position - (index / 8) * 8))));
         }
         bytes[index / 8] = chosenByte;
     }
@@ -49,10 +41,25 @@ public class BitArray {
             return 2;
         }
         byte chosenByte = bytes[index / 8];
+                                       //f(x)----------------//
+        return (byte) (chosenByte >>(8 - (position - (index / 8) * 8))  & 1);
+                                  //g(f(x)---------------------//
 
-        return (byte) (chosenByte >> (position%8) & 1);
+        /*
+             1 2 3 4 5 6 7 8 9 10 11 ... x
+             1 2 3 4 5 6 7 8 1 2  3 ...  f(x)
+             7 6 5 4 3 2 1 0 7 6  5 ... g(f(x)) = 8 - f(x)
+        */
     }
 
+    public byte getByte(int index){
+        byte result = bytes[index];
+        if(index == bytes.length-1){   // length%8   1-1  2-3 3-7 4-15 5-31 6-63 7-127
+            result = (byte) ((result >>> (8-length%8)) & 3);
+        }
+        return result;
+    }
+    
     static public BitArray bitStringToBitArray(String data){
         BitArray array = new BitArray(data.length());
         for (int i = 0; i < array.getLength(); i++) {
@@ -67,7 +74,6 @@ public class BitArray {
 
     public String bitArrayToBitString() {
         String result = "";
-        System.out.println(this.getLength());
 
         for(int i = 0; i < this.getBytes().length*8; i++){
             if(i%8 == 0){
@@ -86,8 +92,6 @@ public class BitArray {
         return result;
     }
 
-
-
     static public BitArray stringToBitArray(String data) {
         return new BitArray(data.getBytes());
     }
@@ -97,22 +101,33 @@ public class BitArray {
     }
 
     public String bitArrayToHexString(){
-        for(int i = 0; i < getBytes().length; i++){
-             //1 2 3 4 5 6 7 8 -> /16 -> 0 0 0 0 1 2 3 4
-             //1 2 3 4 5 6 7 8 -> *16/16 -> 0 0 0 0 5 6 7 8
-
+        byte[] fourtimesbits = new byte[bytes.length*2];
+        String result ="";
+        for(int i = 0; i < bytes.length; i++){
+            fourtimesbits[i*2] =(byte) ((bytes[i] >>> 4) & 15) ;
+            fourtimesbits[i*2+1] = (byte) (bytes[i] & 15);
 
         }
+        for(byte b: fourtimesbits) {
+            result += Integer.toHexString(b);
+        }
+
+        return result;
     }
 
     static public BitArray hexStringToBitArray(String data){
-        BitArray array = new BitArray(data.length()*4);
+        byte[] dataInBytes = new byte[data.length()];
         for(int i = 0 ; i < data.length(); i++){
             String pom = "" + data.toCharArray()[i];
-            Integer.parseInt(pom, 16);
+            dataInBytes[i] = (byte) Integer.parseInt(pom, 16);
         }
-        return array;
+        byte[] dataInFourTimesBits = new byte[data.length()/2];
+        for(int i = 0; i < dataInFourTimesBits.length; i++){
+            dataInFourTimesBits[i] = (byte) (dataInBytes[i*2]*16 + dataInBytes[i*2+1]);
+        }
+        return new BitArray(dataInFourTimesBits);
     }
+
 
 
     public BitArray permute(PermuteTable table) {
