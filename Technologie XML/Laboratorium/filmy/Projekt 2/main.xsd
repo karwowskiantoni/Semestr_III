@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:main="tego/main"
+    targetNamespace="tego/main"
+    xmlns:types="tego/types"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+
+<xs:import schemaLocation="typydanych.xsd" namespace="tego/types"/>
+
+<xs:element name="filmweb" type="main:filmwebType">
+
+  <xs:key name="klucz"> 
+    <xs:selector xpath="main:Platformy/main:Platforma"/>
+    <xs:field xpath="@link"/>
+  </xs:key>
+
+  <xs:keyref name="kluczRef" refer="main:klucz">
+    <xs:selector xpath="main:MagazynFilmów/main:Film/main:Dostępność"/>
+    <xs:field xpath="@platforma"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="filmwebType">
+    <xs:sequence>
+      <xs:element type="types:bylejakitekst" name="Początek"/>
+      <xs:element type="main:MagazynFilmówType" name="MagazynFilmów"/>
+      <xs:element type="main:PlatformyType" name="Platformy"/>
+      <xs:element type="main:AutorType" name="Autor"/>
+      <xs:element type="types:data" name="DataOstatniejModyfikacji"/>
+    </xs:sequence>
+    <xs:attribute type="main:imienazwiskorazem" name="autor" use="required"/>
+  </xs:complexType>
+
+<xs:complexType name="FilmType">
+    <xs:sequence>
+      <xs:element type="main:InfoType" name="Info"/>
+      <xs:element type="main:PlakatType" name="Plakat"/>
+      <xs:element type="main:DostępnośćType" name="Dostępność"/>
+    </xs:sequence>
+    <xs:attribute type="types:id" name="numer" use="optional"/>
+    <xs:attribute type="types:bylejakitekst" name="gatunek" use="optional"/>
+    <xs:attribute type="types:kraj" name="krajProdukcji" use="optional"/>
+    <xs:attribute type="types:ździebkoliczba" name="oskary" use="optional"/>
+  </xs:complexType>
+
+<xs:complexType name="InfoType">
+    <xs:sequence>
+      <xs:element type="main:TytułType" name="Tytuł" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="main:ReżyserType" name="Reżyser"/>
+      <xs:element type="main:OcenaType" name="Ocena"/>
+      <xs:element type="main:BoxofficeType" name="Boxoffice"/>
+      <xs:element type="main:SukcesType" name="Sukces"/>
+      <xs:element type="types:data" name="Premiera"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TytułType">
+    <xs:simpleContent>
+      <xs:extension base="types:tytulType">
+        <xs:attribute type="types:pochodzenie" name="origin" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ReżyserType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element type="types:imie" name="Imię" />
+        <xs:element type="types:imiona" name="Imiona" />
+    </xs:choice>
+      <xs:element type="types:nazwisko" name="Nazwisko"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OcenaType">
+    <xs:sequence>
+      <xs:element type="types:ździebkoliczba" name="Średnia"/>
+      <xs:element type="types:sporaliczba" name="Głosów"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CałośćType">
+    <xs:simpleContent>
+      <xs:extension base="types:pinionzki">
+        <xs:attribute type="types:prefiks" name="waluta" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="PierwszyTydzieńType">
+    <xs:simpleContent>
+      <xs:extension base="types:pinionzki">
+        <xs:attribute type="types:prefiks" name="waluta" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="UdziałPierwszegoTygodniaType">
+    <xs:simpleContent>
+      <xs:extension base="types:pinionzki">
+        <xs:attribute type="types:prefiks" name="jednostka" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="BoxofficeType">
+    <xs:sequence>
+      <xs:element type="main:CałośćType" name="Całość"/>
+      <xs:element type="main:PierwszyTydzieńType" name="PierwszyTydzień"/>
+      <xs:element type="main:UdziałPierwszegoTygodniaType" name="UdziałPierwszegoTygodnia"/>
+      <xs:element type="types:pinionzki" name="Budżet"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SukcesType">
+    <xs:attribute type="types:bul" name="value" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="PlakatType">
+    <xs:attribute type="types:bylejakitekst" name="plik" use="required"/>
+    <xs:attribute type="types:bylejakitekst" name="ścieżka" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DostępnośćType">
+    <xs:attribute type="types:ździebkoliterki" name="platforma" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="MagazynFilmówType">
+    <xs:sequence>
+      <xs:element type="main:FilmType" name="Film" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PlatformaType">
+    <xs:simpleContent>
+      <xs:extension base="types:bylejakitekst">
+        <xs:attribute type="types:ździebkoliterki" name="link" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="PlatformyType">
+    <xs:sequence>
+      <xs:element type="main:PlatformaType" name="Platforma" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AutorType">
+    <xs:sequence>
+      <xs:element type="main:imienazwiskorazem" name="ImięiNazwisko"/>
+      <xs:element type="types:indeks" name="NrAlbumu"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="imienazwiskorazem">
+        <xs:list itemType="types:imie"/>
+    </xs:simpleType>
+
+</xs:schema>

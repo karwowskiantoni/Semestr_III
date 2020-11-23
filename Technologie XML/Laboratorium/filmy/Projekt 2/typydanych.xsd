@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="tego/types" xmlns:dane="tego/types">
+
+    <xs:simpleType name="tytulOryginalny">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-Z\s':è0-9]+"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tytulPolski">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-ZĄĆĘŁŃÓŚŹŻ][a-zA-Z\sĄĆĘŁŃÓŚŹŻąćęłńóśźż:]+"/>
+            <xs:maxLength value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tytulType">
+        <xs:union memberTypes="dane:tytulPolski dane:tytulOryginalny"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="imie">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-ząćęłńóśźż]+"/>
+            <xs:maxLength value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imiona">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-ząćęłńóśźż]+\s[A-Z][a-ząćęłńóśźż]+"/>
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nazwisko">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-ząćęłńóśźż\sP]+"/>
+            <xs:maxLength value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="indeks">
+        <xs:restriction base="xs:int">
+            <xs:pattern value="\d{6}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="data">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([1-9]|[12][0-9]|3[01])[\s][a-ząśćńęłóźż]+[\s](19|20)\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="bylejakitekst">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="bul">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="true|false" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="pochodzenie">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="pl"/>
+            <xs:enumeration value="org"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="prefiks">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[$%]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="pinionzki">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9\.]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="f[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kraj">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z\sąćłńóężźć]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ździebkoliczba">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sporaliczba">
+        <xs:restriction base="xs:unsignedLong">
+            <xs:maxInclusive value="9999999999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ździebkoliterki">
+        <xs:restriction base="xs:token">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+</xs:schema>
