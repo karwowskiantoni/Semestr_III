@@ -4,7 +4,8 @@
 	<!ENTITY L "Czołg Lekki">
     <!ENTITY M "Czołg Średni">
     <!ENTITY H "Czołg Ciężki">
-    ]>
+]>
+
 
 
 <Zadanie_1_AK>
@@ -197,7 +198,7 @@
                 <Zawieszenie udźwig="110" jednostka="%">
                     <Wieża masa="8000" jednostka="kg">
                         <TypWieży> M6D1 </TypWieży>
-                        <Działo kaliber="32" jednostka="mm"> Gun M7</Działo>
+                        <Działo kaliber="32" jednostka="mm">Gun M7</Działo>
                     </Wieża>
                     <Radio zasięg="480" jednostka="m">SCR 538</Radio>
                 </Zawieszenie>
@@ -409,33 +410,33 @@
         </Pojazd>
 
         <Kraje>
-            <Kraj id="ZSRR"> Związek Socjalistycznych Republik Radzieckich </Kraj>
-            <Kraj id="IIIR"> Trzecia Rzesza </Kraj>
-            <Kraj id="PL"> Polska </Kraj>
-            <Kraj id="FR"> Francja </Kraj>
-            <Kraj id="USA"> Stany Zjednoczone Ameryki </Kraj>
+            <Kraj id="ZSRR">Związek Socjalistycznych Republik Radzieckich</Kraj>
+            <Kraj id="IIIR">Trzecia Rzesza</Kraj>
+            <Kraj id="PL">Polska</Kraj>
+            <Kraj id="FR">Francja</Kraj>
+            <Kraj id="USA">Stany Zjednoczone Ameryki</Kraj>
         </Kraje>
 
         <TypyPojazdow>
-            <Typ id="L"> Czołg Lekki </Typ>
-            <Typ id="M"> Czołg Średni </Typ>
-            <Typ id="H"> Czołg Ciężki </Typ>
+            <Typ id="L">Czołg Lekki</Typ>
+            <Typ id="M">Czołg Średni</Typ>
+            <Typ id="H">Czołg Ciężki</Typ>
         </TypyPojazdow>
 
         <FunkcjeZalogi>
 
-            <Funkcja id="D"> Dowódca </Funkcja>
-            <Funkcja id="S"> Strzelec </Funkcja>
-            <Funkcja id="O"> Operator </Funkcja>
-            <Funkcja id="N"> Nawigator </Funkcja>
-            <Funkcja id="K"> Kierowca </Funkcja>
+            <Funkcja id="D">Dowódca</Funkcja>
+            <Funkcja id="S">Strzelec</Funkcja>
+            <Funkcja id="O">Operator</Funkcja>
+            <Funkcja id="N">Nawigator</Funkcja>
+            <Funkcja id="K">Kierowca</Funkcja>
 
         </FunkcjeZalogi>
 
         <Autor>
-            <Imię> Antoni </Imię>
-            <Nazwisko> Karwowski </Nazwisko>
-            <Indeks> 229908 </Indeks>
+            <Imię>Antoni</Imię>
+            <Nazwisko>Karwowski</Nazwisko>
+            <Indeks>229908</Indeks>
         </Autor>
     </PojazdyPancerneDrugiejWojnyŚwiatowej>
 </Zadanie_1_AK>
