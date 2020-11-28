@@ -23,26 +23,22 @@ public class BitArray {
     }
 
     public void setBit(int value, int index) {
-        int position = index + 1;
-        byte insertion = (byte) value;
+
         byte chosenByte = bytes[(index) / 8];
-        byte shiftedInsertion = (byte) (insertion << (8 - (position - (index / 8) * 8)));
-        if (insertion == 1) {
-            chosenByte = (byte) (shiftedInsertion | chosenByte);
-        } else {
-            chosenByte = (byte) (chosenByte & ~(1 << (8 - (position - (index / 8) * 8))));
+
+        if(value == 0) {
+            chosenByte = (byte) (chosenByte & ~(1 << (8 - ((index +1) - (index / 8) * 8))));
+        }else {
+            chosenByte = (byte) (    (byte) (value << (8 - ((index +1) - (index / 8) * 8)))     |    chosenByte    );
         }
+
         bytes[index / 8] = chosenByte;
     }
 
     public byte getBit(int index) {
-        int position = index + 1;
-        if(position > length){
-            return 2;
-        }
         byte chosenByte = bytes[index / 8];
                                        //f(x)----------------//
-        return (byte) (chosenByte >>(8 - (position - (index / 8) * 8))  & 1);
+        return (byte) (chosenByte >>(8 - ((index + 1) - (index / 8) * 8))  & 1);
                                   //g(f(x)---------------------//
 
         /*
@@ -59,7 +55,7 @@ public class BitArray {
         }
         return result;
     }
-    
+
     static public BitArray bitStringToBitArray(String data){
         BitArray array = new BitArray(data.length());
         for (int i = 0; i < array.getLength(); i++) {
@@ -155,16 +151,12 @@ public class BitArray {
     }
 
     public BitArray XOR(BitArray bitArray) {
-        BitArray result = new BitArray(bitArray.getLength());
 
-        for (int i = 0; i < this.getLength(); i++) {
-            if(this.getBit(i) == bitArray.getBit(i)){
-                result.setBit(0, i);
-            }else{
-                result.setBit(1, i);
-            }
+        for(int i = 0; i < this.getBytes().length; i++){
+            bitArray.getBytes()[i] = (byte) ((int)(this.getBytes()[i]) ^ (int)(bitArray.getBytes()[i]));
         }
-        return result;
+
+        return bitArray;
     }
 
     public BitArray connect(BitArray array){
