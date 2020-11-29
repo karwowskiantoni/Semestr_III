@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="Zadanie_1_AK.css" type="text/css"?>
-<!DOCTYPE Zadanie_1_AK SYSTEM "Zadanie_1_AK.dtd"[
+<!DOCTYPE Zadanie_1_AK[
 	<!ENTITY L "Czołg Lekki">
     <!ENTITY M "Czołg Średni">
     <!ENTITY H "Czołg Ciężki">
@@ -8,7 +8,11 @@
 
 
 
-<Zadanie_1_AK>
+<Zadanie_1_AK   xmlns="root/dataTypes" 
+                xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+                xs:schemaLocation="root/dataTypes projekt2_1.xsd">
+
+
     <Tytuł>POJZADY PANCERNE DRUGIEJ WOJNY ŚWIATOWEJ</Tytuł>
     <PojazdyPancerneDrugiejWojnyŚwiatowej>
         

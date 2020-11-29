@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+  xmlns:dt="root/dataTypes"
+  xmlns:pt="root/primitiveTypes"
+  targetNamespace="root/dataTypes"
+  attributeFormDefault="unqualified" 
+  elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+<xs:import schemaLocation="projekt2_2.xsd" namespace="root/primitiveTypes"/>
+
+<xs:element name="Zadanie_1_AK" type="dt:Zadanie_1_AKType">
+  
+      <xs:key name="kluczyk">
+        <xs:selector xpath="dt:PojazdyPancerneDrugiejWojnyŚwiatowej/dt:Kraje/dt:Kraj"/>
+        <xs:field xpath="@id"/>
+      </xs:key>
+
+
+      <xs:keyref name="kluczykRef" refer="dt:kluczyk">
+        <xs:selector xpath="dt:PojazdyPancerneDrugiejWojnyŚwiatowej/dt:Pojazd"/>
+        <xs:field xpath="@kraj"/>
+      </xs:keyref>
+
+</xs:element>
+
+
+  <xs:complexType name="WagaType">
+    <xs:simpleContent>
+      <xs:extension base="pt:roundedFloatBelowThousand">
+        <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="PrędkośćMaksymalnaType">
+    <xs:simpleContent>
+      <xs:extension base="pt:IntBelowThousand">
+        <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="DziałoType">
+    <xs:simpleContent>
+      <xs:extension base="pt:PolishString">
+        <xs:attribute type="pt:IntBelowThousand" name="kaliber" use="required"/>
+        <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="WieżaType">
+    <xs:sequence>
+      <xs:element type="pt:PolishString" name="TypWieży"/>
+      <xs:element type="dt:DziałoType" name="Działo"/>
+    </xs:sequence>
+    <xs:attribute type="pt:AnyInt" name="masa" use="required"/>
+    <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="RadioType">
+    <xs:simpleContent>
+      <xs:extension base="pt:PolishString">
+        <xs:attribute type="pt:IntBelowThousand" name="zasięg" use="required"/>
+        <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ZawieszenieType">
+    <xs:sequence>
+      <xs:element type="dt:WieżaType" name="Wieża"/>
+      <xs:element type="dt:RadioType" name="Radio"/>
+    </xs:sequence>
+    <xs:attribute type="pt:IntBelowThousand" name="udźwig" use="required"/>
+    <xs:attribute type="pt:unit" name="jednostka" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="WyposażenieType">
+    <xs:sequence>
+      <xs:element type="dt:ZawieszenieType" name="Zawieszenie"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CzłonekType">
+        <xs:attribute type="pt:ID" name="funkcja1" use="required"/>
+        <xs:attribute type="pt:ID" name="funkcja2" use="optional"/>
+        <xs:attribute type="pt:ID" name="funkcja3" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ZałogaType">
+    <xs:sequence>
+      <xs:element type="dt:CzłonekType" name="Członek" maxOccurs="10" minOccurs="2"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PojazdType">
+    <xs:sequence>
+      <xs:element type="pt:PolishString" name="NazwaModelu"/>
+      <xs:element type="dt:WagaType" name="Waga"/>
+      <xs:element type="dt:PrędkośćMaksymalnaType" name="PrędkośćMaksymalna"/>
+      <xs:element type="pt:date" name="DataPowstania"/>
+      <xs:element type="dt:WyposażenieType" name="Wyposażenie"/>
+      <xs:element type="dt:ZałogaType" name="Załoga"/>
+    </xs:sequence>
+    <xs:attribute type="pt:IntBelowThousand" name="numer" use="required"/>
+    <xs:attribute type="xs:string" name="typPojazdu" use="required"/>
+    <xs:attribute type="pt:ID" name="kraj" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="KrajType">
+    <xs:simpleContent>
+      <xs:extension base="pt:PolishString">
+        <xs:attribute type="pt:ID" name="id" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="KrajeType">
+    <xs:sequence>
+      <xs:element type="dt:KrajType" name="Kraj" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TypType">
+    <xs:simpleContent>
+      <xs:extension base="pt:PolishString">
+        <xs:attribute type="pt:ID" name="id" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="TypyPojazdowType">
+    <xs:sequence>
+      <xs:element type="dt:TypType" name="Typ" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FunkcjaType">
+    <xs:simpleContent>
+      <xs:extension base="pt:PolishString">
+        <xs:attribute type="pt:ID" name="id" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="FunkcjeZalogiType">
+    <xs:sequence>
+      <xs:element type="dt:FunkcjaType" name="Funkcja" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AutorType">
+    <xs:sequence>
+      <xs:element type="pt:PolishString" name="Imię"/>
+      <xs:element type="pt:PolishString" name="Nazwisko"/>
+      <xs:element type="pt:PolishString" name="Indeks"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PojazdyPancerneDrugiejWojnyŚwiatowejType">
+    <xs:sequence>
+      <xs:element type="dt:PojazdType" name="Pojazd" maxOccurs="18" minOccurs="18"/>
+      <xs:element type="dt:KrajeType" name="Kraje"/>
+      <xs:element type="dt:TypyPojazdowType" name="TypyPojazdow"/>
+      <xs:element type="dt:FunkcjeZalogiType" name="FunkcjeZalogi"/>
+      <xs:element type="dt:AutorType" name="Autor"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Zadanie_1_AKType">
+    <xs:sequence>
+      <xs:element type="pt:PolishString" name="Tytuł"/>
+      <xs:element type="dt:PojazdyPancerneDrugiejWojnyŚwiatowejType" name="PojazdyPancerneDrugiejWojnyŚwiatowej"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+</xs:schema>
