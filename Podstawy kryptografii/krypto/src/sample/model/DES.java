@@ -21,27 +21,34 @@ public class DES {
                                                                 2, 8, 24, 14, 32, 27, 3, 9,
                                                                 19, 13, 30, 6, 22, 11, 4, 25});
 
-/*
-    public String tripleDES(String dataString, String keyStringOne, String keyStringTwo, boolean notEncoded){
-        BitArray data;
 
-        if(notEncoded){
-            data = BitArray.stringToBitArray(dataString);
-        }else{
-            data = BitArray.hexStringToBitArray(dataString);
-        }
+//    public String tripleDESForText(String dataString, String keyStringOne, String keyStringTwo, boolean notEncoded){
+//        BitArray data;
+//
+//        if(notEncoded){
+//            data = BitArray.stringToBitArray(dataString);
+//        }else{
+//            data = BitArray.hexStringToBitArray(dataString);
+//        }
+//
+//        data = singleDES(data, keyStringOne, notEncoded);
+//        data = singleDES(data, keyStringTwo, !notEncoded);
+//
+//        if(notEncoded){
+//            return singleDES(data, keyStringOne, notEncoded).bitArrayToHexString();
+//        }else{
+//            return singleDES(data, keyStringOne, notEncoded).bitArrayToString();
+//        }
+//
+//    }
 
-        data = singleDES(data, keyStringOne, notEncoded);
-        data = singleDES(data, keyStringTwo, !notEncoded);
-        if(notEncoded){
-            return singleDES(data, keyStringOne, notEncoded).bitArrayToHexString();
-        }else{
-            return singleDES(data, keyStringOne, notEncoded).bitArrayToString();
-        }
+    public BitArray tripleDES(BitArray data, Key key1, Key key2, boolean notEncoded){
+        data = singleDES(data, key1, notEncoded);
+        data = singleDES(data, key2, !notEncoded);
+        return singleDES(data, key1, notEncoded);
     }
 
-    public BitArray singleDES(BitArray data, String keyString, boolean mode) {
-        Key key = new Key(BitArray.stringToBitArray(keyString).getBits());
+    public BitArray singleDES(BitArray data, Key key, boolean mode) {
         Sbox sbox = new Sbox();
 
         data = data.permute(initialPermute);
@@ -51,7 +58,7 @@ public class DES {
         BitArray dataL = data;
 
         for(int i = 0; i < 16; i++) {
-            BitArray pom = new BitArray(dataR.getBits());
+            BitArray pom = new BitArray(dataR.getBytes());
 
             //początek funkcji f
             dataR = dataR.permute(extendingPermute);
@@ -60,6 +67,7 @@ public class DES {
             } else {
                 dataR = dataR.XOR(keys[15-i]);
             }
+
             dataR = sbox.transformArray(dataR);
             dataR = dataR.permute(pBlockPermute);
             //koniec funkcji f
@@ -67,8 +75,10 @@ public class DES {
             dataR = dataR.XOR(dataL);
             dataL= pom;
         }
+
         return dataR.connect(dataL).permute(finalPermute);
+
     }
 
- */
+
 }

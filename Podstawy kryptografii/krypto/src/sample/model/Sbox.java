@@ -55,18 +55,27 @@ public class Sbox {
 
         BitArray[] arrays = new BitArray[]{array, array2, array3, array4, array5, array6, array7, array8};
 
-        BitArray result = new BitArray(32);
+        BitArray result = new BitArray(0);
         for (int i = 0; i < 8; i++) {
-            result = result.connect(tranform(arrays[i], i));
+            BitArray longer = new BitArray(new byte[]{transform(arrays[i], i)});
+            BitArray shorter = new BitArray(4);
+            shorter.setBit(longer.getBit(4), 0);
+            shorter.setBit(longer.getBit(5), 1);
+            shorter.setBit(longer.getBit(6), 2);
+            shorter.setBit(longer.getBit(7), 3);
+
+            result = result.connect(shorter);
         }
         return result;
     }
 
-    private BitArray tranform(BitArray array, int number) {
+    private byte transform(BitArray array, int number) {
+
         BitArray pierwszy = new BitArray(2);
         pierwszy.setBit(array.getBit(0),0);
-        pierwszy.setBit(array.getBit(5),6);
+        pierwszy.setBit(array.getBit(5),1);
         byte coordX = pierwszy.getByte(0);
+
         BitArray drugi = new BitArray(4);
         drugi.setBit(array.getBit(1),0);
         drugi.setBit(array.getBit(2),1);
@@ -74,9 +83,7 @@ public class Sbox {
         drugi.setBit(array.getBit(4),3);
         byte coordY = drugi.getByte(0);
 
-        BitArray result =  new BitArray(4);
-        result.getBytes()[0] = boxes[number][coordX * 16 + coordY];
-        return new BitArray(boxes[number][coordX * 16 + coordY]);
+        return boxes[number][coordX * 16 + coordY];
     }
 
 }
