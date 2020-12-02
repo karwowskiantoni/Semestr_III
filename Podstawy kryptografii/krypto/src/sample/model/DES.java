@@ -22,26 +22,6 @@ public class DES {
                                                                 19, 13, 30, 6, 22, 11, 4, 25});
 
 
-//    public String tripleDESForText(String dataString, String keyStringOne, String keyStringTwo, boolean notEncoded){
-//        BitArray data;
-//
-//        if(notEncoded){
-//            data = BitArray.stringToBitArray(dataString);
-//        }else{
-//            data = BitArray.hexStringToBitArray(dataString);
-//        }
-//
-//        data = singleDES(data, keyStringOne, notEncoded);
-//        data = singleDES(data, keyStringTwo, !notEncoded);
-//
-//        if(notEncoded){
-//            return singleDES(data, keyStringOne, notEncoded).bitArrayToHexString();
-//        }else{
-//            return singleDES(data, keyStringOne, notEncoded).bitArrayToString();
-//        }
-//
-//    }
-
     public BitArray tripleDES(BitArray data, Key key1, Key key2, boolean notEncoded){
         data = singleDES(data, key1, notEncoded);
         data = singleDES(data, key2, !notEncoded);

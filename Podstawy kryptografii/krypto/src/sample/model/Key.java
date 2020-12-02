@@ -15,9 +15,7 @@ public class Key  extends BitArray {
     byte[] shiftTable = new byte[]{1, 1, 2 ,2, 2, 2, 2, 2 ,1 ,2 ,2 ,2 ,2 ,2 ,2 ,1};
 
 
-    public Key(int length) {
-        super(length);
-    }
+    public Key(int length) { super(length); }
 
     public Key(byte[] bytes) {
         super(bytes);

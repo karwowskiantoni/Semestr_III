@@ -159,8 +159,7 @@ public class Controller {
     public void saveFile(){
         BitArray bitArray = BitArray.bitStringToBitArray("010011011000110111");
         BitArray bitArray1 = new BitArray(new byte[]{bitArray.getByte(2)});
-        System.out.println(bitArray1.bitArrayToBitString());
-        System.out.println(bitArray.getByte(2));
+        System.out.println("haha taka zmyłka");
     }
 
 }
