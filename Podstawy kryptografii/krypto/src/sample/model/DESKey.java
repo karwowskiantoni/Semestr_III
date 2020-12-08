@@ -1,6 +1,6 @@
 package sample.model;
 
-public class Key  extends BitArray {
+public class DESKey extends BitArray {
 
     PermuteTable initialPermuteLeft = new PermuteTable(new byte[]{57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26,18
                                                                 ,10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36});
@@ -15,9 +15,9 @@ public class Key  extends BitArray {
     byte[] shiftTable = new byte[]{1, 1, 2 ,2, 2, 2, 2, 2 ,1 ,2 ,2 ,2 ,2 ,2 ,2 ,1};
 
 
-    public Key(int length) { super(length); }
+    public DESKey(int length) { super(length); }
 
-    public Key(byte[] bytes) {
+    public DESKey(byte[] bytes) {
         super(bytes);
     }
 

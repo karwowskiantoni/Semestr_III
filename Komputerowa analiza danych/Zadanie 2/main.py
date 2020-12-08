@@ -152,6 +152,7 @@ if __name__ == '__main__':
 
 
                                                  # DANE 2
+    print("cojest")
     docArgumentsTwo = np.array(dataFrameTwo["x"].tolist())
     valuesTwo = np.array(dataFrameTwo["y"].tolist())
 

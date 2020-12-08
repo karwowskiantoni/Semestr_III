@@ -7,18 +7,16 @@ import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import sample.model.BitArray;
 import sample.model.DES;
-import sample.model.Key;
+import sample.model.DESKey;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.Watchable;
 import java.util.Arrays;
 
-public class Controller {
+public class ControllerJeden {
     @FXML
     TextArea dataField = new TextArea();
     @FXML
@@ -66,8 +64,8 @@ public class Controller {
 
         DES tdes = new DES();
 
-        Key keyOne = new Key(BitArray.stringToBitArray(keyField1.getText()).getBytes());
-        Key keyTwo = new Key(BitArray.stringToBitArray(keyField2.getText()).getBytes());
+        DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
+        DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
 
         for(String block :data){
@@ -87,8 +85,8 @@ public class Controller {
         String[] data =dataField.getText().split("(?<=\\G.{16})");
 
         DES tdes = new DES();
-        Key keyOne = new Key(BitArray.stringToBitArray(keyField1.getText()).getBytes());
-        Key keyTwo = new Key(BitArray.stringToBitArray(keyField2.getText()).getBytes());
+        DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
+        DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         for(String block :data){
             result += tdes.tripleDES(
@@ -108,8 +106,8 @@ public class Controller {
         }
 
         DES tdes = new DES();
-        Key keyOne = new Key(BitArray.stringToBitArray(keyField1.getText()).getBytes());
-        Key keyTwo = new Key(BitArray.stringToBitArray(keyField2.getText()).getBytes());
+        DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
+        DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         byte[] result = new byte[bytes.length];
 
@@ -129,8 +127,8 @@ public class Controller {
         }
 
         DES tdes = new DES();
-        Key keyOne = new Key(BitArray.stringToBitArray(keyField1.getText()).getBytes());
-        Key keyTwo = new Key(BitArray.stringToBitArray(keyField2.getText()).getBytes());
+        DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
+        DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         byte[] result = new byte[bytes.length];
 

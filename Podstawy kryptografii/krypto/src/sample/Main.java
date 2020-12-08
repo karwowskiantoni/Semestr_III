@@ -12,8 +12,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("TripleDES");
+        Parent root = FXMLLoader.load(getClass().getResource("zadanie2.fxml"));
+        primaryStage.setTitle("Blum-Micali");
         primaryStage.setScene(new Scene(root, 1168, 827));
         Scene scene = primaryStage.getScene();
         primaryStage.show();

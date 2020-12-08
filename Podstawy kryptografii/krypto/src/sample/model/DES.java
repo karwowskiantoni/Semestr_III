@@ -22,13 +22,13 @@ public class DES {
                                                                 19, 13, 30, 6, 22, 11, 4, 25});
 
 
-    public BitArray tripleDES(BitArray data, Key key1, Key key2, boolean notEncoded){
+    public BitArray tripleDES(BitArray data, DESKey key1, DESKey key2, boolean notEncoded){
         data = singleDES(data, key1, notEncoded);
         data = singleDES(data, key2, !notEncoded);
         return singleDES(data, key1, notEncoded);
     }
 
-    public BitArray singleDES(BitArray data, Key key, boolean mode) {
+    public BitArray singleDES(BitArray data, DESKey key, boolean mode) {
         Sbox sbox = new Sbox();
 
         data = data.permute(initialPermute);
