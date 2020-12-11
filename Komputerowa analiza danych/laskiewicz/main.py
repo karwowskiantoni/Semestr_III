@@ -6,27 +6,21 @@ import random
 
 if __name__ == '__main__':
 
-    miesnie = ["mięśnie prostowniki grzbietu",
-               "mięśnie czworogłowe ud",
-               "mięśnie dwugłowe ud",
-               "mięsnie pośladkowe",
-               "mięśnie najszersze grzbietu"]
+    miesnie = ["Przedni akton mięśni naramiennych",
+               "Mięsień trójgłowego ramienia",
+               "Mięsień piersiowy większy i mniejszy",
+               "Mięsień podobojczykowy",
+               "Mięsień zębaty przedni",
+               "Mięsień najszerszy grzbietu",
+               "Mięsień czworoboczny", "Mięsień obły większy", "Mięśnie zginacze nadgarstka"]
 
-    bledy = ["koci grzbiet", "podnoszenie barków", "przegięcie w tył", "podnoszenie głowy do góry",
-             "za szeroki rozstaw dłoni", "pozycja bioder jak przy przysiadzie"]
-
-    ciagi = ["martwy ciąg rumuński",
-             "martwy ciąg na prostych nogach",
-             "martwy ciąg z bloków",
-             "martwy ciąg chwytem rwaniowym",
-             "martwy ciąg z łańcuchami",
-             "martwy ciąg z deficytu",
-             "martwy ciąg z podstawek",
-             "martwy ciąg na jednej nodze"]
+    bledy = ["Brak rozgrzewki", "Zbyt duża odległość między poręczami",
+             "Pochylanie tułowia", "Rozsuwanie łokci na boki",
+             "Niepełny wyprost rąk", "Zwiększanie na siłę ruchu opuszczania tułowia",
+             "Niepełny ruch opuszczania tułowia"]
 
     random.shuffle(miesnie)
     random.shuffle(bledy)
-    random.shuffle(ciagi)
 
     for x in miesnie:
         print(x)
@@ -37,8 +31,5 @@ if __name__ == '__main__':
         print(x)
 
     print()
-
-    for x in ciagi:
-        print(x)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

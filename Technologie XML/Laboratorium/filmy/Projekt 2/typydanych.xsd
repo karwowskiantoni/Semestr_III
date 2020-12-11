@@ -115,6 +115,4 @@ targetNamespace="tego/types" xmlns:dane="tego/types">
         </xs:restriction>
     </xs:simpleType>
 
-
-
 </xs:schema>

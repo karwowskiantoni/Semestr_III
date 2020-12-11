@@ -69,7 +69,7 @@
       <xs:choice>
         <xs:element type="types:imie" name="Imię" />
         <xs:element type="types:imiona" name="Imiona" />
-    </xs:choice>
+      </xs:choice>
       <xs:element type="types:nazwisko" name="Nazwisko"/>
     </xs:sequence>
   </xs:complexType>

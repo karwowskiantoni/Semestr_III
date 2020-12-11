@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <title>Zadanie Krok Po Kroku XPath</title>
+    <style>
+      body {
+        font-family: Times New Roman;
+        background-color: black;
+      }
+      p {
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Zadanie 1<br />
+      1.Ustawić szablon na /osoby/grupaStudentow/student[3].<br />
+      2.Wyświetlić podane grupy elementów/atrybutów z poziomu
+      /osoby/grupaStudentow/student[3] - czyli ścieżki względne z użyciem osi
+      przy definicji ścieżek.<br />
+    </p>
+    <p>A. Nazwisko bieżącego elementu: <br />Różyc<br /></p>
+    <p>
+      B. Element bieżący student wraz z podelementami:
+      <br />
+      Teofil Różyc 765432 24 80
+    </p>
+    <p>
+      C. Element o nazwie grupaPracownikow:
+      <br />
+
+      Michał Wołodyjowski 87987 60 Bogusław Radziwił 65665 40 Barbara
+      Wołodyjowska 56734 45
+
+      <br />
+    </p>
+    <p>
+      D. Punkty studenta o imieniu Stefania: <br />
+      100
+    </p>
+    <p>E. NrAlbumu i wiek bieżącego elementu student: <br />765432 24 <br /></p>
+    <p>
+      F. Wiek studenta o imieniu Aleksandra <br />
+      22 <br />
+    </p>
+    <p>
+      G. Numery wszystkich pracowników <br />
+      87987 65665 56734<br />
+    </p>
+    <p>
+      H. Płeć studentów Aleksandra i Teofil oraz wszystkich pracowników:
+      <br />
+      -k -m -m -m -k<br />
+    </p>
+  </body>
+</html>
+<p>
+  Zadanie 2 <br />
+  Korzystając z predykatów oraz operatorów wyświetlić.<br />
+</p>
+<p>
+  A. Elementy student o wieku powyżej 21 lat:
+  <br />
+  Stefania Rudecka 127687 23 100
+  <br />
+  Teofil Różyc 765432 24 80
+  <br />
+  Aleksandra 445566 Billowiczówna 22 75
+  <br />
+</p>
+<p>
+  B. Wszystkie elementy student, które mają atrybut "plec" o wartości "k":
+  <br />
+  Stefania Rudecka 127687 23 100
+  <br />
+  Aleksandra 445566 Billowiczówna 22 75
+  <br />
+</p>
+<p>
+  C. Wszystkich pracowników mężczyzn:
+  <br />
+  Michał Wołodyjowski 87987 60
+  <br />
+  Bogusław Radziwił 65665 40
+  <br />
+</p>
+<p>
+  D. Wszystkich pracowników, których numer pracownika jest większy od 40000:
+  <br />
+  Michał Wołodyjowski 87987 60
+  <br />
+  Bogusław Radziwił 65665 40
+  <br />
+  Barbara Wołodyjowska 56734 45
+  <br />
+</p>
+<p>Zadanie 3 Korzystając z funkcji position() wyświetlić:<br /></p>
+<p>
+  A. Drugie wystąpienie elementu student:
+  <br />
+  Stefania Rudecka 127687 23 100
+  <br />
+</p>
+<p>
+  B. Trzecie i kolejne wystąpienie student:
+  <br />
+  Teofil Różyc 765432 24 80 Aleksandra 445566 Billowiczówna 22 75
+  <br />
+</p>
+<p>
+  C. Wszystkich poza drugim wystąpieniem elementu student:
+  <br />
+  Jan Bohatyrowicz 123459 21 50
+  <br />
+  Teofil Różyc 765432 24 80
+  <br />
+  Aleksandra 445566 Billowiczówna 22 75
+  <br />
+  Andrzej Kmicic 20 10
+  <br />
+</p>
+<p>
+  D. Wszystkie elementy, które są drugim dzieckiem swojego ojca:
+  <br />
+
+  Michał Wołodyjowski 87987 60 Bogusław Radziwił 65665 40 Barbara Wołodyjowska
+  56734 45
+
+  <br />
+  Stefania Rudecka 127687 23 100
+  <br />Bohatyrowicz<br />Rudecka<br />Różyc<br />445566<br />Kmicic<br />
+  Bogusław Radziwił 65665 40
+  <br />
+  Wołodyjowski<br />
+  Radziwił<br />
+  Wołodyjowska<br />
+</p>
+<p>
+  E. Podostatniego pracownika i studenta:
+  <br />
+  Aleksandra 445566 Billowiczówna 22 75
+  <br />
+  Bogusław Radziwił 65665 40
+  <br />
+</p>
+<p>
+  F. Od drugiego włącznie pracownika:
+  <br />
+  Bogusław Radziwił 65665 40
+  <br />
+  Barbara Wołodyjowska 56734 45
+  <br />
+</p>
+<p>Zadanie 4 Korzystając z funkcji XPath wyświetlić: <br /></p>
+<p>
+  A. Wszystkie wartości wiek wykorzystując funkcję text():
+  <br />
+  - 21 - 23 - 24 - 22 - 20 - 60 - 40 - 45
+</p>
+<p>B. Sumę wartości wiek wszystkich pracowników: <br />110<br /></p>
+<p>C. Średnią wieku mężczyzn: <br />33<br /></p>
+<p>
+  D. Łańców znaków imię oraz nazwisko rozdzielone spacją np. Teofil Różyc:
+  <br />Jan Bohatyrowicz<br />
+  Michał Wołodyjowski<br />
+</p>
+<p>
+  E. Najmłodszego i najstarszego studenta i pracownika: <br />Studenci:<br />
+  Najmłodszy: Andrzej Kmicic 20 10
+  <br />
+  Najstarszy: Teofil Różyc 765432 24 80
+  <br /><br />Pracownicy:<br />
+  Najmłodszy: Bogusław Radziwił 65665 40
+  <br />
+  Najstarszy: Michał Wołodyjowski 87987 60
+  <br />
+</p>
+<p>
+  F. Liczbę kobiet jak i mężczyzn (zarówno studentów jak i pracowników):
+  <br />
+  Kobiet jest: 3<br />
+  Mężczyzn jest: 5<br />
+</p>
+<p>
+  G. Liczbę kobiet i mężczyzn dla poszczególnych grup (studentów i osobno dla
+  pracowników):
+  <br />
+  Studentek jest: 2<br />
+  Studentów jest: 3<br />
+  Pracowniczek jest: 1<br />
+  Pracowników jest: 2<br />
+</p>
+<p>
+  H. Największą i najmniejszą liczbę zdobytych punktów przez studentów
+  <br />
+  Największa ilość punktów zdobytych przez studenta: 100<br />
+  Najmniejsza ilość punktów zdobytych przez studenta: 50 <br />
+</p>
+<p>I. Średnią liczbę zdobytych punktów przez studentów <br />76.25</p>
+<p>
+  J. liczbę studentów, którzy zdali czyli uzyskali powyżej 50 punktów <br />3
+</p>
