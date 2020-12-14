@@ -63,19 +63,22 @@ public class ControllerDwa {
     }
 
     public void encryptFile() throws IOException {
-//        byte[][] blocks = new byte[bytes.length/8][];
-//
-//        try (FileOutputStream stream = new FileOutputStream("encrypted")) {
-//            //stream.write(result);
-//        }
+        BitArray key = BitArray.stringToBitArray(keyField1.getText());
+        BitArray data = new BitArray(bytes);
+        BitArray result = StreamCypher.cypher(data, key);
+        try (FileOutputStream stream = new FileOutputStream("encrypted")) {
+            stream.write(result.getBytes());
+        }
     }
 
     public void decryptFile() throws IOException {
-//        byte[][] blocks = new byte[bytes.length/8][];
-//
-//        try (FileOutputStream stream = new FileOutputStream("decrypted")) {
-//            //stream.write(result);
-//        }
+        BitArray key = BitArray.stringToBitArray(keyField1.getText());
+        BitArray data= new BitArray(bytes);
+        BitArray result = StreamCypher.cypher(data, key);
+
+        try (FileOutputStream stream = new FileOutputStream("decrypted")) {
+            stream.write(result.getBytes());
+        }
     }
 
     public void chooseFile() throws IOException {

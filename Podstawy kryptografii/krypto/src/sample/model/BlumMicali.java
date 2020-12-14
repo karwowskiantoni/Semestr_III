@@ -1,27 +1,28 @@
 package sample.model;
-import java.lang.Math;
-import java.math.BigInteger;
+import sample.najman.*;
+
 
 public class BlumMicali {
     public static BitArray generateArray(BitArray seed, int length){
-
+        int seedValue = 0;
+        for(byte b: seed.getBytes()){
+            seedValue += b;
+        }
         BitArray result = new BitArray(length);
-        BigInteger a = new BigInteger(Integer.toString(seed.getByte(0)+2));
+        Najman a = new Najman("2");
 
-        BigInteger p = new BigInteger(Integer.toString(seed.getByte(0)+3));
-        BigInteger previous = new BigInteger(Integer.toString(seed.getByte(0)));
+        Najman p = new Najman("3089014570559104071319006923413060128665200110584708220833159771123973154612557115837845252375278767");
+        System.out.println(p.isProbablePrime(64));
+        Najman previous = new Najman(Integer.toString(seedValue));
+
         for(int i = 0; i < length; i++){
-            System.out.println(previous);
-            if(previous.compareTo(p.subtract(new BigInteger("1")).divide(new BigInteger("2"))) == 0){
+            if(previous.compareTo(p.subtract(new Najman("1")).divide(new Najman("2"))) == 1){
                 result.setBit(0, i);
             } else {
                 result.setBit(1, i);
             }
-
-            BigInteger next = previous.modPow();
-            previous = next.mod(p);
+            previous = a.modPow(previous, p);
         }
-
         return result;
     }
 }
