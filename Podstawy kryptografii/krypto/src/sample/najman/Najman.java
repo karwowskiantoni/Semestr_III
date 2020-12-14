@@ -3296,22 +3296,9 @@ public class Najman extends Number implements Comparable<Najman> {
         return bc;
     }
 
-    // Primality Testing
+    // Test pierwszosci Najmana
 
-    /**
-     * Returns {@code true} if this Matma is probably prime,
-     * {@code false} if it's definitely composite.  If
-     * {@code certainty} is &le; 0, {@code true} is
-     * returned.
-     *
-     * @param  certainty a measure of the uncertainty that the caller is
-     *         willing to tolerate: if the call returns {@code true}
-     *         the probability that this Matma is prime exceeds
-     *         (1 - 1/2<sup>{@code certainty}</sup>).  The execution time of
-     *         this method is proportional to the value of this parameter.
-     * @return {@code true} if this Matma is probably prime,
-     *         {@code false} if it's definitely composite.
-     */
+
     public boolean isProbablePrime(int certainty) {
         if (certainty <= 0)
             return true;
@@ -3324,21 +3311,7 @@ public class Najman extends Number implements Comparable<Najman> {
         return w.primeToCertainty(certainty, null);
     }
 
-    // Comparison Operations
 
-    /**
-     * Compares this Matma with the specified Matma.  This
-     * method is provided in preference to individual methods for each
-     * of the six boolean comparison operators ({@literal <}, ==,
-     * {@literal >}, {@literal >=}, !=, {@literal <=}).  The suggested
-     * idiom for performing these comparisons is: {@code
-     * (x.compareTo(y)} &lt;<i>op</i>&gt; {@code 0)}, where
-     * &lt;<i>op</i>&gt; is one of the six comparison operators.
-     *
-     * @param  val Matma to which this Matma is to be compared.
-     * @return -1, 0 or 1 as this Matma is numerically less than, equal
-     *         to, or greater than {@code val}.
-     */
     public int compareTo(Najman val) {
         if (signum == val.signum) {
             switch (signum) {

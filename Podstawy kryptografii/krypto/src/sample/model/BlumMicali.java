@@ -12,6 +12,7 @@ public class BlumMicali {
         Najman a = new Najman("2");
 
         Najman p = new Najman("3089014570559104071319006923413060128665200110584708220833159771123973154612557115837845252375278767");
+        System.out.println(p.isProbablePrime(64));
         Najman previous = new Najman(Integer.toString(seedValue));
 
         for(int i = 0; i < length; i++){
