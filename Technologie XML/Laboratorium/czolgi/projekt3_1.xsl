@@ -19,7 +19,7 @@
     <xsl:template match="Załoga"/>
     <xsl:template match="Wyposażenie"/>
 
-    <xsl:template match="Pojazd">
+    <!-- <xsl:template match="Pojazd">
         <xsl:copy>
             <xsl:apply-templates select="@numer|@typPojazdu|node()"/>
             
@@ -43,7 +43,7 @@
             </xsl:element> 
 
         </xsl:copy>
-    </xsl:template>
+    </xsl:template> -->
 
 
 
