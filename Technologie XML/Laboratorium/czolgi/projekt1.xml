@@ -8,9 +8,7 @@
 
 
 
-<Zadanie_1_AK   xmlns="root/dataTypes" 
-                xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-                xs:schemaLocation="root/dataTypes projekt2_1.xsd">
+<Zadanie_1_AK>
 
 
     <Tytuł>POJZADY PANCERNE DRUGIEJ WOJNY ŚWIATOWEJ</Tytuł>

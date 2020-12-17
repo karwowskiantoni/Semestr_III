@@ -1,35 +1,19 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="html" encoding="UTF-8"/>
+
+
+<xsl:output
+    method="xhtml"
+    encoding="UTF-8"
+    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    indent="yes"
+/>
+
     <xsl:template match="/">
-        <html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
+                <link rel="stylesheet" type="text/css" href="projekt3.css" />
                 <title>Czołgi</title>
-                <style>
-                    body {
-                        background-color: rgb(200, 200, 200);
-                        font-size: 15px;
-                        color: black;
-                    }
-                    table {
-                        border: 4px ridge rgb(78, 78, 78);
-                        gap:3%;
-                    }
-                    caption { 
-                        text-allign: center;
-                        font-size: 30px;
-                    }
-                    th {
-                        border: 4px ridge rgb(78, 78, 78);
-                    }
-            
-                    td {
-                        border: 4px ridge rgb(78, 78, 78);
-                        text-align: center;
-                    }
-                    .czerwony{
-                        color: red;
-                    }
-                </style>
             </head>
                 <body>
                     <table>
