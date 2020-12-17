@@ -1,0 +1,414 @@
+
+Zadanie_1_AK{
+    background-color:rgb(216, 216, 216);
+}
+Tytuł{
+    padding-top: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xxx-large;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+PojazdyPancerneDrugiejWojnyŚwiatowej{
+    margin: 12%;
+    margin-top: 2%;
+    margin-bottom: 35%;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(9,11%);
+    gap: 2%;
+    grid-template-areas:
+    "a a b c"
+    "a a d d"
+    "e f d d"
+    "g h h j"
+    "i h h k"
+    "l l m m"
+    "l l m m"
+    "n o s s"
+    "p r s s";
+}
+
+[numer="1"] { grid-area: a; }
+[numer="2"] { grid-area: b; }
+[numer="3"] { grid-area: c; }
+[numer="4"] { grid-area: e; }
+[numer="5"] { grid-area: f; }
+[numer="6"] { grid-area: g; }
+[numer="7"] { grid-area: i; }
+[numer="8"] { grid-area: h; }
+[numer="9"] { grid-area: j; }
+[numer="10"] { grid-area: k; }
+[numer="11"] { grid-area: d; }
+[numer="12"] { grid-area: l; }
+[numer="13"] { grid-area: m; }
+[numer="14"] { grid-area: n; }
+[numer="15"] { grid-area: o; }
+[numer="16"] { grid-area: p; }
+[numer="17"] { grid-area: r; }
+[numer="18"] { grid-area: s; }
+
+
+
+Pojazd[numer="1"] {
+    background:url("https://imgur.com/ov82vZA.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="2"] {
+    background:url("https://imgur.com/38DmcVJ.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+Pojazd[numer="3"] {
+    background:url("https://imgur.com/vrSmIQt.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="4"] {
+    background:url("https://imgur.com/2CJg58I.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="5"] {
+    background:url("https://imgur.com/Eohk8cI.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="6"] {
+    background:url("https://imgur.com/PxGI42w.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="7"] {
+    background:url("https://imgur.com/Ny882SY.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="8"] {
+    background:url("https://imgur.com/ioX4yz6.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="9"] {
+    background:url("https://imgur.com/CrJE3Nh.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="10"] {
+    background:url("https://imgur.com/Nj3ZzoL.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="11"] {
+    background:url("https://imgur.com/HDwoc6Y.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="12"] {
+    background:url("https://imgur.com/WzewBob.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="13"] {
+    background:url("https://imgur.com/D7y7d2b.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="14"] {
+    background:url("https://imgur.com/Fp9PDSa.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="15"] {
+    background:url("https://imgur.com/Nh1sn43.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="16"] {
+    background:url("https://imgur.com/HWaObpB.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="17"] {
+    background:url("https://imgur.com/52TswE3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+Pojazd[numer="18"] {
+    background:url("https://imgur.com/LhvsAMq.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+Pojazd {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 10%);
+    font-size: 10px;
+    gap: 10%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+
+    padding: 3%;
+}
+
+Pojazd[numer="1"], Pojazd[numer="11"], Pojazd[numer="12"], Pojazd[numer="8"], Pojazd[numer="13"], Pojazd[numer="18"]{
+    font-size: 20px;
+}
+
+Pojazd:hover {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+Pojazd:active {
+    transform: scale(1.4);
+    background: whitesmoke;
+    opacity: 1;
+}
+
+Pojazd *{
+    opacity: 0;
+}
+
+Pojazd:active *{
+    opacity: 1;
+}
+
+
+
+
+
+Załoga *{
+    display: list-item;
+    list-style: decimal;
+}
+
+Członek::before{
+    content: attr(funkcja1);
+}
+
+Załoga::before{
+    content: "skład załogi: ";
+}
+
+Członek[funkcja1="D"]::before{
+    content: "Dowódca";
+}
+
+Członek[funkcja1="S"]::before{
+    content: "Strzelec";
+}
+
+Członek[funkcja1="O"]::before{
+    content: "Operator";
+}
+
+Członek[funkcja1="K"]::before{
+    content: "Kierowca";
+}
+
+Członek[funkcja1="N"]::before{
+    content: "Nawigator";
+}
+
+
+
+Pojazd[kraj="FR"]::before{
+    content: "FRANCJA";
+}
+
+Pojazd[kraj="ZSRR"]::before{
+    content: "ZSSR";
+}
+
+Pojazd[kraj="PL"]::before{
+    content: "POLSKA";
+}
+
+Pojazd[kraj="USA"]::before{
+    content: "STANY ZJEDNOCZONE AMERYKI";
+}
+
+Pojazd[kraj="IIIR"]::before{
+    content: "TRZECIA RZESZA";
+}
+
+
+
+NazwaModelu::before{
+    content: "Nazwa Modelu: ";
+}
+
+Waga::before{
+    content: "Waga: ";
+}
+
+Waga::after{
+    content: attr(jednostka);
+}
+
+PrędkośćMaksymalna::before{
+    content: "Prędkość Maksymalna: ";
+}
+
+PrędkośćMaksymalna::after{
+    content: attr(jednostka);
+}
+
+DataPowstania::before{
+    content: "Data Powstania: ";
+}
+
+Wyposażenie::before{
+    content: "wyposażenie: " ;
+}
+
+Wyposażenie *{
+    display: list-item;
+}
+
+TypWieży::before{
+    content: "Wieża: ";
+}
+
+Działo::before {
+    content: "Działo: ";
+}
+
+Radio::before{
+    content: "radio: ";
+}
+
+
+
+
+
+Kraje{
+    background-color: white;
+    margin-bottom: 5%;
+    font-size: 15px;
+    display: block;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    padding: 10%;
+}
+
+Kraje *{
+    display: list-item;
+}
+
+Kraje::before{
+    content: "spis krajów:";
+    font-size: 20px;
+}
+
+
+
+
+
+FunkcjeZalogi{
+    background-color: white;
+    margin-bottom: 5%;
+    font-size: 15px;
+    display: block;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    padding: 10%;
+}
+
+FunkcjeZalogi *{
+    display: list-item;
+}
+
+FunkcjeZalogi::before{
+    content: "spis funkcji załogi:";
+    font-size: 20px;
+}
+
+
+
+
+
+TypyPojazdow{
+    background-color: white;
+    margin-bottom: 5%;
+    font-size: 15px;
+    display: block;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    padding: 10%;
+}
+
+TypyPojazdow *{
+    display: list-item;
+}
+
+TypyPojazdow::before{
+    content: "spis typów pojazdów:";
+    font-size: 20px;
+}
+
+
+
+
+
+Autor{
+    background-color: white;
+    margin-bottom: 5%;
+    font-size: 15px;
+    display: block;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    padding: 10%;
+}
+
+Autor *{
+    display: block;
+}
+
+Autor::before{
+    content: "Wykonane przez:";
+    font-size: 25px;
+}
+
+
+
+
+Imię::before{
+    content: "imię:";
+}
+Nazwisko::before{
+    content: "nazwisko:";
+}
+Indeks::before{
+    content: "numer indeksu:";
+}
