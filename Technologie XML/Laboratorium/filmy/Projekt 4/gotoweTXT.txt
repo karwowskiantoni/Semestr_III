@@ -1,0 +1,65 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Ilość oskarów     Tytuł filmu                       Reżyser                  Ocena     Boxoffice      Zarobki w I tygodniu   Budżet       Procentowy udział I tygodnia   Premiera              Platforma
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+10                Władca Pierścieni: Powrót Króla   Peter Jackson            8.33      1141999888$    172629$                94000000$    0.02%                          1 grudnia 2003        www.netflix.com
+7                 Lista Schindlera                  Steven Spielberg         8.33      322139355$     656636$                22000000$    0.2%                           30 listopada 1993     www.cda.pl
+6                 Forrest Gump                      Robert Zemeckis          8.52      683095371$     24450602$              55000000$    3.58%                          24 czerwca 1994       www.hbogo.com
+6                 Ojciec Chrzestny II               Francis Ford Coppola     8.38      286801374$     406533$                13000000$    0.14%                          12 grudnia 1974       www.netflix.com
+5                 Lot nad kukułczym gniazdem        Milos Forman             8.44      108981275$     99761$                 3000000$     0.09%                          19 listopada 1975     www.cda.pl
+5                 Milczenie owiec                   Jonathan Demme           8.21      272742922$     13766814$              19000000$    5.05%                          30 stycznia 1991      www.cda.pl
+5                 Gladiator                         Ridley Scott             8.09      465361176$     34819017$              103000000$   7.48%                          1 maja 2000           www.netflix.com
+4                 Piękny umysł                      Ron Howard               8.23      313542341$     111261$                58000000$    0.04%                          13 grudnia 2001       www.hbogo.com
+4                 Incepcja                          Christoper Nolan         8.22      836836967$     62785337$              160000000$   7.5%                           8 lipca 2010          www.netflix.com
+3                 Ojciec Chrzestny                  Francis Ford Coppola     8.59      245066411$     302393$                6000000$     0.12%                          15 marca 1972         www.netflix.com
+3                 Życie jest piękne                 Roberto Benigni          8.29      229163264$     118920$                20000000$    0.05%                          20 grudnia 1997       www.cda.pl
+3                 Pianista                          Roman Polański           8.23      286801374$     18017152$              35000000$    6.28%                          24 maja 2002          www.player.com
+3                 Green Book                        Peter Farelly            8.12      321752656$     320429$                23000000$    0.1%                           11 września 2018      www.hbogo.com
+2                 Joker                             Todd Phillips            8.30      1074251311$    96202337$              55000000$    8.96%                          31 sierpnia 2019      www.cda.pl
+2                 Władca Pierścieni: Dwie wieże     Peter Jackson            8.26      951227065$     62007528$              94000000$    6.52%                          10 września 1994      www.netflix.com
+2                 Django                            Quentin Tarantino        8.21      425368238$     30122888$              100000000$   7.08%                          11 grudnia 2012       www.netflix.com
+2                 Król lew                          Jonathan Roberts         8.21      968511805$     1586753$               45000000$    0.16%                          15 czerwca 1994       www.hbogo.com
+1                 Pulp Fiction                      Quentin Tarantino        8.32      213928762$     9311882$               8000000$     4.35%                          10 września 1994      www.hbogo.com
+1                 Chłopcy z ferajny                 Martin Scorsese          8.24      46836214$      6368901$               25000000$    13.6%                          12 września 1990      www.netflix.com
+0                 Skazani na Shawshank              Frank Darabont           8.76      59841469$      727327$                25000000$    1.22%                          10 września 1994      www.netflix.com
+0                 Nietykalni                        Olivier Nakache          8.63      426588510$     101053$                9500000$     0.02%                          23 września 2011      www.canalplus.com
+0                 Zielona Mila                      Frank Darabont           8.60      286801374$     18017152$              60000000$    6.28%                          6 grudnia 1999        www.netflix.com
+0                 Dwunastu gniewnych ludzi          Sidney Lumet             8.55      2000000$       20000$                 340000$      1%                             10 kwietnia 1957      www.cda.pl
+0                 Siedem                            David Fincher            8.27      327333559$     13949807$              33000000$    4.26%                          15 września 1995      www.netflix.com
+0                 Podziemny krąg                    David Fincher            8.25      100853753$     11035485$              63000000$    10.94%                         10 września 1999      www.cda.pl
+0                 Człowiek z blizną                 Brian De Palma           8.19      65884703$      44597536$              25000000$    67.69%                         1 grudnia 1983        www.netflix.com
+0                 Gran Torino                       Clint Eastwood           8.17      269958228$     271720$                33000000$    0.1%                           9 grudnia 2008        www.hbogo.com
+0                 Wyspa tajemnic                    Martin Scorsese          8.15      294804195$     41062440$              80000000$    13.93%                         10 września 1994      www.cda.pl
+0                 Więzień nienawiści                Tony Kaye                8.13      23875127$      156076$                20000000$    0.65%                          30 października 1998  www.cda.pl
+0                 Leon Zawodowiec                   Luc Besson               8.12      19501238$      5306558$               16000000$    27.21%                         14 września 1994      www.cda.pl
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxx    Raport   xxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Ilość elementów w dokumencie:      30                 xxx
+xxx Całkowity koszt wszystkich filmów: 1302840000$        xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxx Film o największym przychodzie xxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Tytuł     xxx       Władca Pierścieni: Powrót Króla   xxx
+xxx Przychód  xxx               1141999888$               xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxx Film o najmniejszym przychodzie xxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Tytuł     xxx        Dwunastu gniewnych ludzi         xxx
+xxx Przychód  xxx                 2000000$                xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Oskarów/Film  xxx                2.5                  xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Data wygenerowania  xxx    2020-12-12+01:00           xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxx Podział filmów na platformy VOD xxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Netflix    xxx                      12                xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx HBO GO     xxx                      6                 xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Canal Plus xxx                      1                 xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx Player     xxx                      1                 xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxx CDA        xxx                      10                xxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200"><a href="https://filmweb.pl/"><image x="650" y="100" width="600" height="600" href="logo.svg"/></a><text onclick="mozart()" x="105" y="55" font-family="Comic Sans MS" font-size="32">
+               Ilość filmów z bazy danych na danej platformie VOD:
+            </text><text x="60" y="120" font-family="Comic Sans MS" font-size="32">12</text><rect onclick="changeColour()" class="firstColumn" x="50" width="50" y="140" height="440" fill="#DC143C" stroke="black" stroke-width="5"><animate attributeType="XML" attributeName="height" from="0" to="440" dur="4s" fill="freeze"/><animate attributeType="XML" attributeName="y" from="600" to="160" dur="4s" fill="freeze"/></rect><text onclick="szuruburu()" id="dataDoOskarow" x="500" y="800" font-family="Comic Sans MS" font-size="20">
+                    Sprawdź ile dni zostało do gali rozdania oskarów
+                </text><text id="final" x="500" y="850" font-family="Comic Sans MS" font-size="20"/><text writing-mode="tb-lr" x="45" y="640" font-family="Comic Sans MS" font-size="20" fill="#000000">Netflix</text><text x="180" y="120" font-family="Comic Sans MS" font-size="32">6</text><rect onclick="changeColour()" class="firstColumn" x="170" width="50" y="140" height="220" fill="#DC143C" stroke="black" stroke-width="5"><animate attributeType="XML" attributeName="height" from="0" to="220" dur="4s" fill="freeze"/><animate attributeType="XML" attributeName="y" from="600" to="380" dur="4s" fill="freeze"/></rect><text onclick="szuruburu()" id="dataDoOskarow" x="500" y="800" font-family="Comic Sans MS" font-size="20">
+                    Sprawdź ile dni zostało do gali rozdania oskarów
+                </text><text id="final" x="500" y="850" font-family="Comic Sans MS" font-size="20"/><text writing-mode="tb-lr" x="165" y="640" font-family="Comic Sans MS" font-size="20" fill="#000000">HBOGO</text><text x="300" y="120" font-family="Comic Sans MS" font-size="32">1</text><rect onclick="changeColour()" class="firstColumn" x="290" width="50" y="140" height="36.666666666666664" fill="#DC143C" stroke="black" stroke-width="5"><animate attributeType="XML" attributeName="height" from="0" to="36.666666666666664" dur="4s" fill="freeze"/><animate attributeType="XML" attributeName="y" from="600" to="563.3333333333334" dur="4s" fill="freeze"/></rect><text onclick="szuruburu()" id="dataDoOskarow" x="500" y="800" font-family="Comic Sans MS" font-size="20">
+                    Sprawdź ile dni zostało do gali rozdania oskarów
+                </text><text id="final" x="500" y="850" font-family="Comic Sans MS" font-size="20"/><text writing-mode="tb-lr" x="285" y="640" font-family="Comic Sans MS" font-size="20" fill="#000000">CanalPlus</text><text x="420" y="120" font-family="Comic Sans MS" font-size="32">1</text><rect onclick="changeColour()" class="firstColumn" x="410" width="50" y="140" height="36.666666666666664" fill="#DC143C" stroke="black" stroke-width="5"><animate attributeType="XML" attributeName="height" from="0" to="36.666666666666664" dur="4s" fill="freeze"/><animate attributeType="XML" attributeName="y" from="600" to="563.3333333333334" dur="4s" fill="freeze"/></rect><text onclick="szuruburu()" id="dataDoOskarow" x="500" y="800" font-family="Comic Sans MS" font-size="20">
+                    Sprawdź ile dni zostało do gali rozdania oskarów
+                </text><text id="final" x="500" y="850" font-family="Comic Sans MS" font-size="20"/><text writing-mode="tb-lr" x="405" y="640" font-family="Comic Sans MS" font-size="20" fill="#000000">Player</text><text x="540" y="120" font-family="Comic Sans MS" font-size="32">10</text><rect onclick="changeColour()" class="firstColumn" x="530" width="50" y="140" height="366.6666666666667" fill="#DC143C" stroke="black" stroke-width="5"><animate attributeType="XML" attributeName="height" from="0" to="366.6666666666667" dur="4s" fill="freeze"/><animate attributeType="XML" attributeName="y" from="600" to="233.33333333333331" dur="4s" fill="freeze"/></rect><text onclick="szuruburu()" id="dataDoOskarow" x="500" y="800" font-family="Comic Sans MS" font-size="20">
+                    Sprawdź ile dni zostało do gali rozdania oskarów
+                </text><text id="final" x="500" y="850" font-family="Comic Sans MS" font-size="20"/><text writing-mode="tb-lr" x="525" y="640" font-family="Comic Sans MS" font-size="20" fill="#000000">CDA</text><script> 
+                function szuruburu(){
+                var one_day = 1000 * 60 * 60 * 24 
+                var present_date = new Date(); 
+                var oscar = new Date(present_date.getFullYear(), 1, 28) 
+                if (present_date.getMonth() == 1 &amp;&amp; present_date.getdate() &gt; 28) 
+                oscar.setFullYear(oscar.getFullYear() + 1) 
+                var Result = Math.round(oscar.getTime() - present_date.getTime()) / (one_day); 
+                var Final_Result = Result.toFixed(0);
+                var data = document.getElementById('final');
+                data.textContent = "Do gali rozdania oskarów zostało " + Final_Result + " dni"; 
+                }
+
+                function changeColour() {
+                    var simplevar = document.getElementsByClassName('firstColumn');
+                    [].forEach.call(simplevar, function (element) {
+                        element.setAttribute('fill', '#00008B');});
+                 }
+                function mozart(){
+                    var audio = new Audio('https://dorar.at/LARGE/PuretuneMp3/DDTXXuKToo8cm2Y_XbH0Cg/1610460000/201405/189.mp3');
+                    audio.play();
+                    audio.volume = 0.1;
+                }
+                
+            </script></svg>

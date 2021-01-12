@@ -6,30 +6,20 @@ import random
 
 if __name__ == '__main__':
 
-    miesnie = ["Przedni akton mięśni naramiennych",
-               "Mięsień trójgłowego ramienia",
-               "Mięsień piersiowy większy i mniejszy",
-               "Mięsień podobojczykowy",
-               "Mięsień zębaty przedni",
-               "Mięsień najszerszy grzbietu",
-               "Mięsień czworoboczny", "Mięsień obły większy", "Mięśnie zginacze nadgarstka"]
+    miesnie = ["Mięsień naramienny przedni", "Mięsień piersiowy większy", "Mięsień podgrzebieniowy"]
 
-    bledy = ["Brak rozgrzewki", "Zbyt duża odległość między poręczami",
-             "Pochylanie tułowia", "Rozsuwanie łokci na boki",
-             "Niepełny wyprost rąk", "Zwiększanie na siłę ruchu opuszczania tułowia",
-             "Niepełny ruch opuszczania tułowia"]
+    bledy = ["Prowadzenie łokci na boki - błąd ten może skutkować kontuzją barku",
+             "Opuszczanie tułowia niewystarczająco nisko, co zmniejsza efekty pompek",
+             "Brak całkowitego wyprostu łokci przy podnoszeniu się",
+             "Głowa ustawiona zbyt nisko - szyja ma być przedłużeniem kręgosłupa",
+             "Trzymanie bioder za nisko lub za wysoko - sylwetka powinna tworzyć jedną linię",
+             "Zaokrąglone plecy - łopatki powinny być ściągnięte "]
 
-    random.shuffle(miesnie)
+
     random.shuffle(bledy)
 
-    for x in miesnie:
-        print(x)
-
-    print()
 
     for x in bledy:
         print(x)
-
-    print()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
