@@ -9,32 +9,8 @@
 
 
 <Zadanie_1_AK>
-
-
     <Tytuł>POJZADY PANCERNE DRUGIEJ WOJNY ŚWIATOWEJ</Tytuł>
     <PojazdyPancerneDrugiejWojnyŚwiatowej>
-        
-        
-        <Pojazd numer="1" typPojazdu="&L;" kraj="PL">
-            <NazwaModelu>4TP</NazwaModelu>
-            <Waga jednostka="T">4.8</Waga>
-            <PrędkośćMaksymalna jednostka="km/h">35</PrędkośćMaksymalna>
-            <DataPowstania>10.1938</DataPowstania>
-            <Wyposażenie> 
-                <Zawieszenie udźwig="130" jednostka="%">
-                    <Wieża masa="300" jednostka="kg">
-                        <TypWieży>4TP</TypWieży>
-                        <Działo kaliber="20" jednostka="mm">wz.38 FK-A</Działo>
-                    </Wieża>
-                    <Radio zasięg="300" jednostka="m">N2</Radio>
-                </Zawieszenie>
-            </Wyposażenie>
-            <Załoga>
-                <Członek funkcja1="D" funkcja2="S" funkcja3="O"/>
-                <Członek funkcja1="K"/>
-            </Załoga>
-        </Pojazd>
-
         <Pojazd numer="2" typPojazdu="&M;" kraj="PL">
             <NazwaModelu>10TP</NazwaModelu>
             <Waga jednostka="T">12.7</Waga>
@@ -53,6 +29,26 @@
                 <Członek funkcja1="D"/>
                 <Członek funkcja1="S"/>
                 <Członek funkcja1="N"/>
+                <Członek funkcja1="K"/>
+            </Załoga>
+        </Pojazd>
+
+        <Pojazd numer="1" typPojazdu="&L;" kraj="PL">
+            <NazwaModelu>4TP</NazwaModelu>
+            <Waga jednostka="T">4.8</Waga>
+            <PrędkośćMaksymalna jednostka="km/h">35</PrędkośćMaksymalna>
+            <DataPowstania>10.1938</DataPowstania>
+            <Wyposażenie> 
+                <Zawieszenie udźwig="130" jednostka="%">
+                    <Wieża masa="300" jednostka="kg">
+                        <TypWieży>4TP</TypWieży>
+                        <Działo kaliber="20" jednostka="mm">wz.38 FK-A</Działo>
+                    </Wieża>
+                    <Radio zasięg="300" jednostka="m">N2</Radio>
+                </Zawieszenie>
+            </Wyposażenie>
+            <Załoga>
+                <Członek funkcja1="D" funkcja2="S" funkcja3="O"/>
                 <Członek funkcja1="K"/>
             </Załoga>
         </Pojazd>

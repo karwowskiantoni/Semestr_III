@@ -1,6 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-
 <xsl:output
     method="xhtml"
     encoding="UTF-8"
@@ -29,9 +28,8 @@
                                 <th>Kraj Pochodzenia</th>
                             </tr>
 
-                            <xsl:for-each select="Zadanie_1_AK/PojazdyPancerneDrugiejWojnyŚwiatowej/Pojazd">
+                            <xsl:for-each select="PojazdyPancerneDrugiejWojnyŚwiatowej/Pojazd">
                             
-                            <xsl:sort select="Waga" data-type="number" order="ascending"/>
                                 <tr>
                                     <td>
                                         <xsl:value-of select="NazwaModelu"/>
@@ -55,8 +53,8 @@
                                         <xsl:value-of select="TypWieży"/>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="Działo"/>
-                                        (<xsl:value-of select="Działo/@kaliber"/> mm)
+                                        <xsl:value-of select="kaliberDziała"/>
+                                        (<xsl:value-of select="kaliberDziała/@jednostka"/> mm)
                                        
                                     </td>
                                     <td>
@@ -71,6 +69,46 @@
                         </xsl:for-each>
                      
                     </table>
+
+                    <table>
+                        <caption>Raport</caption>
+                        <tr>
+                            <th>Łączna_Waga</th>
+                            <th>Największy_Kaliber_Działa</th>
+                            <th>Pierwsza_Data</th>
+                            <th>Ostatnia_Data</th>
+                            <th>Łączna_Liczba_Członków_Załogi</th>
+                            <th>Procentowy_udział_Czołgów_Szybkich</th>
+                            <th>Data_Wygenerowania</th>
+                        </tr>                            
+                        <tr>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Łączna_Waga"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Największy_Kaliber_Działa"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Okres_Produkcji_Wszystkich_Modeli/Pierwsza_Data"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Okres_Produkcji_Wszystkich_Modeli/Ostatnia_Data"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Łączna_Liczba_Członków_Załogi"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Procentowy_udział_Czołgów_Szybkich"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="PojazdyPancerneDrugiejWojnyŚwiatowej/Raport/Data_Wygenerowania"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        <a href="http://validator.w3.org/check?uri=referer"><img
+                          src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+                    </p>
                 </body>
         </html>
     </xsl:template>
