@@ -62,14 +62,12 @@ public class ControllerJeden {
             }
         }
 
-        DES tdes = new DES();
-
         DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
         DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
 
         for(String block :data){
-            result += tdes.tripleDES(
+            result += DES.tripleDES(
                     BitArray.stringToBitArray(block),
                     keyOne,
                     keyTwo,
@@ -84,12 +82,11 @@ public class ControllerJeden {
         String result = "";
         String[] data =dataField.getText().split("(?<=\\G.{16})");
 
-        DES tdes = new DES();
         DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
         DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         for(String block :data){
-            result += tdes.tripleDES(
+            result += DES.tripleDES(
                     BitArray.hexStringToBitArray(block),
                     keyOne,
                     keyTwo,
@@ -105,14 +102,13 @@ public class ControllerJeden {
             blocks[i] = Arrays.copyOfRange(bytes, i*8, i*8+8);
         }
 
-        DES tdes = new DES();
         DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
         DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         byte[] result = new byte[bytes.length];
 
         for(int i = 0; i < blocks.length; i++){
-            System.arraycopy(tdes.tripleDES(new BitArray(blocks[i]), keyOne, keyTwo, true).getBytes(), 0, result, i*8, blocks[i].length);
+            System.arraycopy(DES.tripleDES(new BitArray(blocks[i]), keyOne, keyTwo, true).getBytes(), 0, result, i*8, blocks[i].length);
         }
 
         try (FileOutputStream stream = new FileOutputStream("encrypted")) {
@@ -126,14 +122,13 @@ public class ControllerJeden {
             blocks[i] = Arrays.copyOfRange(bytes, i*8, i*8+8);
         }
 
-        DES tdes = new DES();
         DESKey keyOne = new DESKey(BitArray.stringToBitArray(keyField1.getText()).getBytes());
         DESKey keyTwo = new DESKey(BitArray.stringToBitArray(keyField2.getText()).getBytes());
 
         byte[] result = new byte[bytes.length];
 
         for(int i = 0; i < blocks.length; i++){
-            System.arraycopy(tdes.tripleDES(new BitArray(blocks[i]), keyOne, keyTwo, false).getBytes(), 0, result, i*8, blocks[i].length);
+            System.arraycopy(DES.tripleDES(new BitArray(blocks[i]), keyOne, keyTwo, false).getBytes(), 0, result, i*8, blocks[i].length);
         }
 
         try (FileOutputStream stream = new FileOutputStream("decrypted")) {
