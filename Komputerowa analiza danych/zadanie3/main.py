@@ -1,4 +1,5 @@
 import numpy as np
+import random as sraka
 from numpy.random.mtrand import random
 
 
@@ -28,19 +29,49 @@ class Warstwa:
     def oblicz_blad_warstwy_poprzedniej(self, blad_warstwy):
         return np.matmul(self.pochodna_funkcji_wyjscia_po_wejsciach(), blad_warstwy)
 
-
-
     def pochodna_funkcji_wyjscia_po_wagach(self):
-        return np.reshape(self.pochodna_funkcji_aktywacji(self.wyjscie), (len(self.wyjscie), 1)) * self.wejscie
-        # return self.wejscie
+
+        # print("---------------------------------------------------------------------")
+        # print("wejscie: ")
+        # print(self.wejscie)
+        # print("---------------------------------------------------------------------")
+        # print("wyjscie obrocone: ")
+        # print(np.reshape(self.wyjscie, (len(self.wyjscie), 1)))
+        # print("---------------------------------------------------------------------")
+
+        return self.wejscie * np.reshape(self.pochodna_funkcji_aktywacji(self.wyjscie), (len(self.wyjscie), 1))
 
     def zmiana_gradientu(self, wspolczynnik_uczenia, blad_warstwy):
-        self.wagi = self.wagi - wspolczynnik_uczenia * self._gradient(blad_warstwy)
+        gradient_przed_zsumowaniem = np.array(self._gradient(blad_warstwy))
+
+        # print("---------------------------------------------------------------------")
+        # print("gradient: ")
+        # print(gradient_przed_zsumowaniem.sum(axis=0))
+        # print("---------------------------------------------------------------------")
+        # print("wagi przed zmiana: ")
+        # print(self.wagi)
+        # print("---------------------------------------------------------------------")
+        # print("wagi po odjeciu gradientu: ")
+        # print(self.wagi - wspolczynnik_uczenia * gradient_przed_zsumowaniem.sum(axis=0))
+
+        self.wagi = self.wagi - wspolczynnik_uczenia * gradient_przed_zsumowaniem #.sum(axis=0)
 
     def _gradient(self, blad_warstwy):
-        return np.reshape(blad_warstwy, (len(self.wyjscie), 1)) * self.pochodna_funkcji_wyjscia_po_wagach()
-        # return np.matmul(np.transpose(self.pochodna_funkcji_wyjscia_po_wagach()), blad_warstwy)   # gradient
 
+        # print("---------------------------------------------------------------------")
+        # print("blad warstwy dla kazdego wyjscia: ")
+        # print(blad_warstwy)
+        # print("---------------------------------------------------------------------")
+        # print("blad warstwy obrocony tak jak powinien byc: ")
+        # print(np.reshape(blad_warstwy, (len(self.wyjscie), 1)))
+        # print("---------------------------------------------------------------------")
+        # print("pochodna funkcji wyjscia po wagach: ")
+        # print(self.pochodna_funkcji_wyjscia_po_wagach())
+        # print("---------------------------------------------------------------------")
+        # print("gradient przed zsumowaniem: ")
+        # print(self.pochodna_funkcji_wyjscia_po_wagach() * np.reshape(blad_warstwy, (len(self.wyjscie), 1)))
+
+        return self.pochodna_funkcji_wyjscia_po_wagach() * np.reshape(blad_warstwy, (len(self.wyjscie), 1))
 
 class SiecNeuronowa:
     def __init__(self, liczba_wejsc, liczba_wyjsc, liczba_neuronow_w_warstwie_ukrytej):
@@ -60,29 +91,65 @@ class SiecNeuronowa:
     def propagacja_w_przod(self, wejscie):
         return self.warstwa_koncowa.funkcja_wyjscia(self.warstwa_ukryta.funkcja_wyjscia(wejscie))
 
-
     def propagacja_wstecz(self, wejscia, wyjscia):
-        for epoki in range(5000):
+        for epoki in range(1000):
+            # indexes = [0]
             indexes = [0, 1, 2, 3]
             np.random.shuffle(indexes)
             for i in indexes:
                 blad_warstwy_koncowej = self.propagacja_w_przod(wejscia[i]) - wyjscia[i]
                 blad_warstwy_ukrytej = self.warstwa_koncowa.oblicz_blad_warstwy_poprzedniej(blad_warstwy_koncowej)
-                self.warstwa_koncowa.zmiana_gradientu(0.1, blad_warstwy_koncowej)
-                self.warstwa_ukryta.zmiana_gradientu(0.1, blad_warstwy_ukrytej)
+
+                # print("ZMIANA GRADIENTU WARSTWY KONCOWEJ")
+                # print("---------------------------------------------------------------------")
+                # print("wagi: ")
+                # print(self.warstwa_koncowa.wagi)
+                # print("---------------------------------------------------------------------")
+
+                self.warstwa_koncowa.zmiana_gradientu(3, blad_warstwy_koncowej)
+
+                # print("ZMIANA GRADIENTU WARSTWY UKRYTEJ")
+                # print("---------------------------------------------------------------------")
+                # print("wagi: ")
+                # print(self.warstwa_ukryta.wagi)
+                # print("---------------------------------------------------------------------")
+
+                self.warstwa_ukryta.zmiana_gradientu(3, blad_warstwy_ukrytej)
                 print(blad_warstwy_koncowej)
 
 
 if __name__ == '__main__':
+
+    # X_dodawanie = np.array([np.array([0,0]) for chuj in range(50)])
+    # print(X_dodawanie.shape)
+    # Y_dodawanie = np.array([0 for chuj in range(50)])
+    # for i in range(50):
+    #     X_dodawanie[i][0] = sraka.randrange(0, 10)
+    #     X_dodawanie[i][1] = sraka.randrange(0, 10)
+    #     Y_dodawanie[i] = X_dodawanie[i][0] + X_dodawanie[i][1]
+
     X_zad1 = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
-    Y_zad1 = np.array([[1, 1, 0, 1], [1, 1, 1, 0], [0, 1, 1, 1], [1, 0, 1, 1]])
+    Y_zad1 = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
     X_zad2 = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
     Y_zad2 = np.array([[0], [1], [1], [0]])
-    neronek = SiecNeuronowa(4, 4, 3)
-    neronek.propagacja_wstecz(X_zad1, Y_zad1)
+    neronek = SiecNeuronowa(2, 1, 10)
+    neronek.propagacja_wstecz(X_zad2, Y_zad2)
     print("neronek stwierdzil ze wynik pownien wygladac tak:")
-    print(neronek.werdykt(X_zad1[0]))
-    print(neronek.werdykt(X_zad1[1]))
-    print(neronek.werdykt(X_zad1[2]))
-    print(neronek.werdykt(X_zad1[3]))
+    print(neronek.werdykt(X_zad2[0]))
+    print(neronek.werdykt(X_zad2[1]))
+    print(neronek.werdykt(X_zad2[2]))
+    print(neronek.werdykt(X_zad2[3]))
 
+# ░░░░█─────────────█──▀──
+# ░░░░▓█───────▄▄▀▀█──────
+# ░░░░▒░█────▄█▒░░▄░█─────
+# ░░░░░░░▀▄─▄▀▒▀▀▀▄▄▀──DO─
+# ░░░░░░░░░█▒░░░░▄▀────IT──
+# ▒▒▒░░░░▄▀▒░░░░▄▀───FOR──
+# ▓▓▓▓▒░█▒░░░░░█▄───BILLY──
+# █████▀▒░░░░░█░▀▄────────
+# █████▒▒░░░▒█░░░▀▄───────
+# ███▓▓▒▒▒▀▀▀█▄░░░░█──────
+# ▓██▓▒▒▒▒▒▒▒▒▒█░░░░█─────
+# ▓▓█▓▒▒▒▒▒▒▓▒▒█░░░░░█────
+# ░▒▒▀▀▄▄▄▄█▄▄▀░░░░░░░█─
