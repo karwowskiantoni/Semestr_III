@@ -1,0 +1,35 @@
+|------------------|----------|-------------------------|---------------------|----------------|--------------|---------------|---------------------------------------------|
+|   NAZWA MODELU   |   WAGA   |   PRĘDKOŚĆ MAKSYMALNA   |    DATA POWSTANIA   |    TYP WIEŻY   |     DZIAŁO   |     RADIO     |KRAJ POCHODZENIA                             |
+|------------------|----------|-------------------------|---------------------|----------------|--------------|---------------|---------------------------------------------|
+|B1                |29.0      |30                       |01.1921              |APX 4           |47            |ER 55          |Francja                                      |
+|D2                |19.9      |23                       |11.1934              | APX 1          |47            |ER 53          |Francja                                      |
+|D1                |11.7      |28                       |11.1929              | Tourelle 2     |47            |ER 52          |Francja                                      |
+|Renault FT        |4.8       |21                       |04.1917              |Berliet         |37            |ER 52          |Francja                                      |
+|Tiger II          |68.8      |38                       |12.1944              |Serienturm      |88            |FuG 12         |Trzecia Rzesza                               |
+|Tiger I           |55.3      |40                       |12.1937              |Ausf. H2        |75            |FuG 12         |Trzecia Rzesza                               |
+|Panther           |44.8      |55                       |04.1943              |Ausf. G         |10            |FuG 5          |Trzecia Rzesza                               |
+|Pz. Kpfw. I       |5.6       |40                       |10.1935              |L.K.A. 2        |20            |FuG 5          |Trzecia Rzesza                               |
+|Pz.Kpfw. 38 (t)   |9.3       |42                       |01.1938              |Ausf. A         |37            |FuG 8          |Trzecia Rzesza                               |
+|M6                |57.4      |50                       |05.1940              | M6D1           |32            |SCR 538        |Stany Zjednoczone Ameryki                    |
+|M4A1 Sherman      |29.3      |48                       |11.1940              |D51066          |100           |SCR 508        |Stany Zjednoczone Ameryki                    |
+|M5 Stuart         |15.0      |64                       |04.1942              |M5              |37            |SCR 506        |Stany Zjednoczone Ameryki                    |
+|IS                |44.4      |35                       |07.1943              |IS-85           |120           |12RK           |Związek Socjalistycznych Republik Radzieckich|
+|KV1               |47.5      |34                       |02.1938              |KV1 LKZ         |76            |10RK           |Związek Socjalistycznych Republik Radzieckich|
+|T34               |27.1      |56                       |03.1940              |T34 mod.1940    |76            |9RM            |Związek Socjalistycznych Republik Radzieckich|
+|T26               |10.2      |36                       |01.1931              |T26             |37            |71-TK-3        |Związek Socjalistycznych Republik Radzieckich|
+|10TP              |12.7      |50                       |05.1940              |Bofors          |37            |N2 S           |Polska                                       |
+|4TP               |4.8       |35                       |10.1938              |4TP             |20            |N2             |Polska                                       |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------------------|
+|                                                       |
+| łączna waga: 497.6                                    |
+|                                                       |
+| Największy_Kaliber_Działa: 710                        |
+|                                                       |
+| Łączna_Liczba_Członków_Załogi: 72                     |
+|                                                       |
+| Procentowy_udział_Czołgów_Szybkich: 38.89%            |
+|                                                       |
+| Data_Wygenerowania: 2021-01-11+01:00                  |
+|                                                       |
+|-------------------------------------------------------|

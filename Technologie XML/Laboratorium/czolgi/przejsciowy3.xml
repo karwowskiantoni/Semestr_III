@@ -47,7 +47,7 @@
             <DataPowstania>04.1943</DataPowstania>
             
             
-        <Radio zasięg="310">FuG 5</Radio><kaliberDziała jednostka="mm">10</kaliberDziała><TypWieży>Ausf. G</TypWieży><KrajPochodzenia>Trzecia Rzesza</KrajPochodzenia></Pojazd><Pojazd numer="11" typPojazdu="Czołg Lekki">
+        <Radio zasięg="310">FuG 5</Radio><kaliberDziała jednostka="mm">10</kaliberDziała><TypWieży>Ausf. G</TypWieży><KrajPochodzenia>Trzecia Rzesza sratatatatatatatatatatatatatatatataattaatatatatatatatatatatatat</KrajPochodzenia></Pojazd><Pojazd numer="11" typPojazdu="Czołg Lekki">
             <NazwaModelu>Pz. Kpfw. I</NazwaModelu>
             <Waga jednostka="T">5.6</Waga>
             <PrędkośćMaksymalna jednostka="km/h">40</PrędkośćMaksymalna>
@@ -124,4 +124,17 @@
             <DataPowstania>10.1938</DataPowstania>
             
             
-        <Radio zasięg="300">N2</Radio><kaliberDziała jednostka="mm">20</kaliberDziała><TypWieży>4TP</TypWieży><KrajPochodzenia>Polska</KrajPochodzenia></Pojazd><Raport><Łączna_Waga>497.6</Łączna_Waga><Największy_Kaliber_Działa>710</Największy_Kaliber_Działa><Okres_Produkcji_Wszystkich_Modeli><Pierwsza_Data>1.1921</Pierwsza_Data><Ostatnia_Data>12.1944</Ostatnia_Data></Okres_Produkcji_Wszystkich_Modeli><Łączna_Liczba_Członków_Załogi>72</Łączna_Liczba_Członków_Załogi><Procentowy_udział_Czołgów_Szybkich>38.89%</Procentowy_udział_Czołgów_Szybkich><Data_Wygenerowania>2021-01-11+01:00</Data_Wygenerowania></Raport></PojazdyPancerneDrugiejWojnyŚwiatowej>
+        <Radio zasięg="300">N2</Radio><kaliberDziała jednostka="mm">20</kaliberDziała><TypWieży>4TP</TypWieży><KrajPochodzenia>Polska</KrajPochodzenia></Pojazd>
+        
+        <InfoDoWykresu>
+            <Francja>4</Francja>
+            <Polska>2</Polska>
+            <ZSRR>4</ZSRR>
+            <IIIRZESZA>5</IIIRZESZA>
+            <USA>3</USA>
+            <ciastko>2</ciastko>
+
+        </InfoDoWykresu>
+        
+        
+        <Raport><Łączna_Waga>497.6</Łączna_Waga><Największy_Kaliber_Działa>710</Największy_Kaliber_Działa><Okres_Produkcji_Wszystkich_Modeli><Pierwsza_Data>1.1921</Pierwsza_Data><Ostatnia_Data>12.1944</Ostatnia_Data></Okres_Produkcji_Wszystkich_Modeli><Łączna_Liczba_Członków_Załogi>72</Łączna_Liczba_Członków_Załogi><Procentowy_udział_Czołgów_Szybkich>38.89%</Procentowy_udział_Czołgów_Szybkich><Data_Wygenerowania>2021-01-11+01:00</Data_Wygenerowania></Raport></PojazdyPancerneDrugiejWojnyŚwiatowej>
