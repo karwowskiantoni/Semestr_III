@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Zadanie_1_AK.css" type="text/css"?>
+<!DOCTYPE Zadanie_1_AK[
+	<!ENTITY L "Czołg Lekki">
+    <!ENTITY M "Czołg Średni">
+    <!ENTITY H "Czołg Ciężki">
+]>
+
+
+
+<Zadanie_1_AK>
+    <Tytuł>POJZADY PANCERNE DRUGIEJ WOJNY ŚWIATOWEJ</Tytuł>
+    <PojazdyPancerneDrugiejWojnyŚwiatowej>
+        <pojazd numer="2" typPojazdu="&M;" kraj="PL">
+            <nazwamodelu>10TP</nazwamodelu>
+            <waga jednostka="T">12.7</waga>
+            <prędkośćmaksymalna jednostka="km/h">50</prędkośćmaksymalna>
+            <datapowstania>05.1940</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="150" jednostka="%">
+                    <wieża masa="520" jednostka="kg">
+                        <typwieży>Bofors</typwieży>
+                        <działo kaliber="37" jednostka="mm">Bofors wz. 37</działo>
+                    </wieża>
+                    <radio zasięg="350" jednostka="m">N2 S</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="N"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="1" typPojazdu="&L;" kraj="PL">
+            <nazwamodelu>4TP</nazwamodelu>
+            <waga jednostka="T">4.8</waga>
+            <prędkośćmaksymalna jednostka="km/h">35</prędkośćmaksymalna>
+            <datapowstania>10.1938</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="130" jednostka="%">
+                    <wieża masa="300" jednostka="kg">
+                        <typwieży>4TP</typwieży>
+                        <działo kaliber="20" jednostka="mm">wz.38 FK-A</działo>
+                    </wieża>
+                    <radio zasięg="300" jednostka="m">N2</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D" funkcja2="S" funkcja3="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="3" typPojazdu="&L;" kraj="ZSRR">
+            <nazwamodelu>T26</nazwamodelu>
+            <waga jednostka="T">10.2</waga>
+            <prędkośćmaksymalna jednostka="km/h">36</prędkośćmaksymalna>
+            <datapowstania>01.1931</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="120" jednostka="%">
+                    <wieża masa="850" jednostka="kg">
+                        <typwieży>T26</typwieży>
+                        <działo kaliber="37" jednostka="mm">B-3</działo>
+                    </wieża>
+                    <radio zasięg="300" jednostka="m">71-TK-3</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="4" typPojazdu="&M;" kraj="ZSRR">
+            <nazwamodelu>T34</nazwamodelu>
+            <waga jednostka="T">27.1</waga>
+            <prędkośćmaksymalna jednostka="km/h">56</prędkośćmaksymalna>
+            <datapowstania>03.1940</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="160" jednostka="%">
+                    <wieża masa="3200" jednostka="kg">
+                        <typwieży>T34 mod.1940</typwieży>
+                        <działo kaliber="76" jednostka="mm">L-11</działo>
+                    </wieża>
+                    <radio zasięg="525" jednostka="m">9RM</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="N"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="5" typPojazdu="&H;" kraj="ZSRR">
+            <nazwamodelu>KV1</nazwamodelu>
+            <waga jednostka="T">47.5</waga>
+            <prędkośćmaksymalna jednostka="km/h">34</prędkośćmaksymalna>
+            <datapowstania>02.1938</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="220" jednostka="%">
+                    <wieża masa="7800" jednostka="kg">
+                        <typwieży>KV1 LKZ</typwieży>
+                        <działo kaliber="76" jednostka="mm">ZiS-5</działo>
+                    </wieża>
+                    <radio zasięg="440" jednostka="m">10RK</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="6" typPojazdu="&H;" kraj="ZSRR">
+            <nazwamodelu>IS</nazwamodelu>
+            <waga jednostka="T">44.4</waga>
+            <prędkośćmaksymalna jednostka="km/h">35</prędkośćmaksymalna>
+            <datapowstania>07.1943</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="170" jednostka="%">
+                    <wieża masa="7200" jednostka="kg">
+                        <typwieży>IS-85</typwieży>
+                        <działo kaliber="120" jednostka="mm">D-25T</działo>
+                    </wieża>
+                    <radio zasięg="625" jednostka="m">12RK</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D" funkcja2="O"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="N"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="7" typPojazdu="&L;" kraj="USA">
+            <nazwamodelu>M5 Stuart</nazwamodelu>
+            <waga jednostka="T">15.0</waga>
+            <prędkośćmaksymalna jednostka="km/h">64</prędkośćmaksymalna>
+            <datapowstania>04.1942</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="1020" jednostka="kg">
+                        <typwieży>M5</typwieży>
+                        <działo kaliber="37" jednostka="mm">Gun M6</działo>
+                    </wieża>
+                    <radio zasięg="615" jednostka="m">SCR 506</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="8" typPojazdu="&M;" kraj="USA">
+            <nazwamodelu>M4A1 Sherman</nazwamodelu>
+            <waga jednostka="T">29.3</waga>
+            <prędkośćmaksymalna jednostka="km/h">48</prędkośćmaksymalna>
+            <datapowstania>11.1940</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="150" jednostka="%">
+                    <wieża masa="4800" jednostka="kg">
+                        <typwieży>D51066</typwieży>
+                        <działo kaliber="100" jednostka="mm">M4</działo>
+                    </wieża>
+                    <radio zasięg="395" jednostka="m">SCR 508</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="9" typPojazdu="&H;" kraj="USA">
+            <nazwamodelu>M6</nazwamodelu>
+            <waga jednostka="T">57.4</waga>
+            <prędkośćmaksymalna jednostka="km/h">50</prędkośćmaksymalna>
+            <datapowstania>05.1940</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="8000" jednostka="kg">
+                        <typwieży> M6D1 </typwieży>
+                        <działo kaliber="32" jednostka="mm">Gun M7</działo>
+                    </wieża>
+                    <radio zasięg="480" jednostka="m">SCR 538</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="10" typPojazdu="&L;" kraj="IIIR">
+            <nazwamodelu>Pz.Kpfw. 38 (t)</nazwamodelu>
+            <waga jednostka="T">9.3</waga>
+            <prędkośćmaksymalna jednostka="km/h">42</prędkośćmaksymalna>
+            <datapowstania>01.1938</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="1200" jednostka="kg">
+                        <typwieży>Ausf. A</typwieży>
+                        <działo kaliber="37" jednostka="mm">L/47</działo>
+                    </wieża>
+                    <radio zasięg="550" jednostka="m">FuG 8</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="11" typPojazdu="&L;" kraj="IIIR">
+            <nazwamodelu>Pz. Kpfw. I</nazwamodelu>
+            <waga jednostka="T">5.6</waga>
+            <prędkośćmaksymalna jednostka="km/h">40</prędkośćmaksymalna>
+            <datapowstania>10.1935</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="460" jednostka="kg">
+                        <typwieży>L.K.A. 2</typwieży>
+                        <działo kaliber="20" jednostka="mm">Kw.K. 30</działo>
+                    </wieża>
+                    <radio zasięg="310" jednostka="m">FuG 5</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D" funkcja2="S" funkcja3="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="12" typPojazdu="&M;" kraj="IIIR">
+            <nazwamodelu>Panther</nazwamodelu>
+            <waga jednostka="T">44.8</waga>
+            <prędkośćmaksymalna jednostka="km/h">55</prędkośćmaksymalna>
+            <datapowstania>04.1943</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="120" jednostka="%">
+                    <wieża masa="7760" jednostka="kg">
+                        <typwieży>Ausf. G</typwieży>
+                        <działo kaliber="10" jednostka="mm">Kw.K L/28</działo>
+                    </wieża>
+                    <radio zasięg="310" jednostka="m">FuG 5</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="13" typPojazdu="&H;" kraj="IIIR">
+            <nazwamodelu>Tiger I</nazwamodelu>
+            <waga jednostka="T">55.3</waga>
+            <prędkośćmaksymalna jednostka="km/h">40</prędkośćmaksymalna>
+            <datapowstania>12.1937</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="8250" jednostka="kg">
+                        <typwieży>Ausf. H2</typwieży>
+                        <działo kaliber="75" jednostka="mm">Kw.K. 42 L/70</działo>
+                    </wieża>
+                    <radio zasięg="710" jednostka="m">FuG 12</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="14" typPojazdu="&H;" kraj="IIIR">
+            <nazwamodelu>Tiger II</nazwamodelu>
+            <waga jednostka="T">68.8</waga>
+            <prędkośćmaksymalna jednostka="km/h">38</prędkośćmaksymalna>
+            <datapowstania>12.1944</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="120" jednostka="%">
+                    <wieża masa="10938" jednostka="kg">
+                        <typwieży>Serienturm</typwieży>
+                        <działo kaliber="88" jednostka="mm">Kw.K. 43 L/71</działo>
+                    </wieża>
+                    <radio zasięg="710" jednostka="m">FuG 12</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="15" typPojazdu="&L;" kraj="FR">
+            <nazwamodelu>Renault FT</nazwamodelu>
+            <waga jednostka="T">4.8</waga>
+            <prędkośćmaksymalna jednostka="km/h">21</prędkośćmaksymalna>
+            <datapowstania>04.1917</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="110" jednostka="%">
+                    <wieża masa="200" jednostka="kg">
+                        <typwieży>Berliet</typwieży>
+                        <działo kaliber="37" jednostka="mm">APX SA18</działo>
+                    </wieża>
+                    <radio zasięg="300" jednostka="m">ER 52</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D" funkcja2="S" funkcja3="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+        
+        <pojazd numer="16" typPojazdu="&L;" kraj="FR">
+            <nazwamodelu>D1</nazwamodelu>
+            <waga jednostka="T">11.7</waga>
+            <prędkośćmaksymalna jednostka="km/h">28</prędkośćmaksymalna>
+            <datapowstania>11.1929</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="150" jednostka="%">
+                    <wieża masa="500" jednostka="kg">
+                        <typwieży> Tourelle 2 </typwieży>
+                        <działo kaliber="47" jednostka="mm">SA34</działo>
+                    </wieża>
+                    <radio zasięg="300" jednostka="m">ER 52</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D" funkcja2="S" funkcja3="O"/>
+                <członek funkcja1="K"/>
+                <członek funkcja1="N"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="17" typPojazdu="&M;" kraj="FR">
+            <nazwamodelu>D2</nazwamodelu>
+            <waga jednostka="T">19.9</waga>
+            <prędkośćmaksymalna jednostka="km/h">23</prędkośćmaksymalna>
+            <datapowstania>11.1934</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="150" jednostka="%">
+                    <wieża masa="1000" jednostka="kg">
+                        <typwieży> APX 1 </typwieży>
+                        <działo kaliber="47" jednostka="mm">SA34</działo>
+                    </wieża>
+                    <radio zasięg="360" jednostka="m">ER 53</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <pojazd numer="18" typPojazdu="&H;" kraj="FR">
+            <nazwamodelu>B1</nazwamodelu>
+            <waga jednostka="T">29.0</waga>
+            <prędkośćmaksymalna jednostka="km/h">30</prędkośćmaksymalna>
+            <datapowstania>01.1921</datapowstania>
+            <wyposażenie> 
+                <zawieszenie udźwig="150" jednostka="%">
+                    <wieża masa="1700" jednostka="kg">
+                        <typwieży>APX 4</typwieży>
+                        <działo kaliber="47" jednostka="mm">SA37</działo>
+                    </wieża>
+                    <radio zasięg="710" jednostka="m">ER 55</radio>
+                </zawieszenie>
+            </wyposażenie>
+            <załoga>
+                <członek funkcja1="D"/>
+                <członek funkcja1="S"/>
+                <członek funkcja1="O"/>
+                <członek funkcja1="K"/>
+            </załoga>
+        </pojazd>
+
+        <Kraje>
+            <Kraj id="ZSRR">Związek Socjalistycznych Republik Radzieckich</Kraj>
+            <Kraj id="IIIR">Trzecia Rzesza</Kraj>
+            <Kraj id="PL">Polska</Kraj>
+            <Kraj id="FR">Francja</Kraj>
+            <Kraj id="USA">Stany Zjednoczone Ameryki</Kraj>
+        </Kraje>
+
+        <TypyPojazdow>
+            <Typ id="L">Czołg Lekki</Typ>
+            <Typ id="M">Czołg Średni</Typ>
+            <Typ id="H">Czołg Ciężki</Typ>
+        </TypyPojazdow>
+
+        <FunkcjeZalogi>
+
+            <Funkcja id="D">Dowódca</Funkcja>
+            <Funkcja id="S">Strzelec</Funkcja>
+            <Funkcja id="O">Operator</Funkcja>
+            <Funkcja id="N">Nawigator</Funkcja>
+            <Funkcja id="K">Kierowca</Funkcja>
+
+        </FunkcjeZalogi>
+
+        <Autor>
+            <Imię>Antoni</Imię>
+            <Nazwisko>Karwowski</Nazwisko>
+            <Indeks>229908</Indeks>
+        </Autor>
+    </PojazdyPancerneDrugiejWojnyŚwiatowej>
+</Zadanie_1_AK>
